@@ -50,18 +50,18 @@ a {
   }
 }
 
+/* Mobile horizontal margins (iPhone 13/14 and similar) */
+@media (min-width: 430px) {
+  body {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+}
+
 /* Horizontal page margins */
 body {
   margin-left: 10rem;
   margin-right: 10rem;
-}
-
-/* Tablet: screens between iPhone and iPad */
-@media (min-width: 430px) and (max-width: 1024px) {
-  body {
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
 }
 
 /* iPad Pro 13in — reduce margins to 7rem */
@@ -69,13 +69,5 @@ body {
   body {
     margin-left: 7rem;
     margin-right: 7rem;
-  }
-}
-
-/* Mobile horizontal margins: any width smaller than 430px */
-@media (max-width: 430px) {
-  body {
-    margin-left: 3rem;
-    margin-right: 3rem;
   }
 }

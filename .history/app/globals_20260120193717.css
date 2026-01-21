@@ -59,8 +59,8 @@ body {
 /* Tablet: screens between iPhone and iPad */
 @media (min-width: 430px) and (max-width: 1024px) {
   body {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 }
 
@@ -75,7 +75,7 @@ body {
 /* Mobile horizontal margins: any width smaller than 430px */
 @media (max-width: 430px) {
   body {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
