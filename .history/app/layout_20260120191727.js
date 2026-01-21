@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable}`}>
+      <body className={`${ghaista.variable}`}>
         {children}
       </body>
     </html>

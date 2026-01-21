@@ -1,6 +1,6 @@
 
-import { Geist } from "next/font/google";
-import { Raleway } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Raleway, Ghaista } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -8,8 +8,18 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 const raleway = Raleway({
   variable: "--font-raleway",
+  subsets: ["latin"],
+});
+
+const ghaista = Ghaista({
+  variable: "--font-ghaista",
   subsets: ["latin"],
 });
 
@@ -26,7 +36,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${ghaista.variable}`}>
         {children}
       </body>
     </html>
