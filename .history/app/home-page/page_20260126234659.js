@@ -7,9 +7,7 @@ export default function HomePage() {
     <main className={styles.page}>
       <div className={styles['Proj-sec']}>
         <FtProj reversed={false}/>
-        <FtProj reversed={true} />
-        <FtProj reversed={false}/> 
-        <FtProj reversed={true} />
+        <FtProj reversed={true} /> 
       </div>
     </main>
   )

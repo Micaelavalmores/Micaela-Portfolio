@@ -6,10 +6,8 @@ export default function HomePage() {
   return (
     <main className={styles.page}>
       <div className={styles['Proj-sec']}>
-        <FtProj reversed={false}/>
-        <FtProj reversed={true} />
-        <FtProj reversed={false}/> 
-        <FtProj reversed={true} />
+        <FtProj reversed/>
+        <FtProj reversed={true} /> 
       </div>
     </main>
   )

@@ -9,7 +9,6 @@ export default function HomePage() {
         <FtProj reversed={false}/>
         <FtProj reversed={true} />
         <FtProj reversed={false}/> 
-        <FtProj reversed={true} />
       </div>
     </main>
   )

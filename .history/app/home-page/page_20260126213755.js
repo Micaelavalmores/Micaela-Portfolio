@@ -5,12 +5,12 @@ import FtProj from '../components/FtProj'
 export default function HomePage() {
   return (
     <main className={styles.page}>
-      <div className={styles['Proj-sec']}>
-        <FtProj reversed={false}/>
-        <FtProj reversed={true} />
-        <FtProj reversed={false}/> 
-        <FtProj reversed={true} />
-      </div>
+      <nav>
+        <ul>
+          <li><Link href="/case-study">Case Study</Link></li>
+        </ul>
+      </nav>
+      <FtProj />
     </main>
   )
 }
