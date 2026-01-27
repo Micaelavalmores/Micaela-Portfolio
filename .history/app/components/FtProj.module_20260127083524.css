@@ -21,7 +21,7 @@
 }
 
 .reversed .projectButton {
-  justify-self: end;
+  justify-content: flex-end;
 }
 
 .imagesColumn {

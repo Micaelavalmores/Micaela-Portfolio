@@ -9,7 +9,7 @@ export default function HomePage() {
       <nav className='Nav-bar'>
         </nav>  
       <Navbar />
-      <div className='intro-sec'>
+      <div className='intro-se'>
         <h1 className={styles['intro-heading']}>Micaela Valmores</h1>
       </div>
       <div className={styles['Proj-sec']}>

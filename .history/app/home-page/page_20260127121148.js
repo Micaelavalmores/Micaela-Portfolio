@@ -9,9 +9,7 @@ export default function HomePage() {
       <nav className='Nav-bar'>
         </nav>  
       <Navbar />
-      <div className='intro-sec'>
-        <h1 className={styles['intro-heading']}>Micaela Valmores</h1>
-      </div>
+      <div className='intro-'
       <div className={styles['Proj-sec']}>
         <FtProj reversed={false}/>
         <FtProj reversed={true} />
