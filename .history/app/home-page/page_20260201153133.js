@@ -21,19 +21,19 @@ export default function HomePage() {
         <FtProj reversed={false}/> 
       </div>
       <div className={styles['Plat-sec']}>
-        <h1>PLATFORMS I CAN USE</h1>
+        <h1>PLATFORMS I CAN USE...</h1>
         <p>I use a wide variety of design and development tools to ensure quality meets the company and user needs.</p>
         <div className={styles['Plat-logos']}>
-          <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={110} height={110} />
-          <img src="/icons/adobe-photoshop.svg" alt="Adobe Photoshop Logo" width={110} height={110} />
-          <img src="/icons/adobe-indesign.svg" alt="Adobe InDesign Logo" width={110} height={110} />
-          <img src="/icons/after-effects.svg" alt="Adobe After Effects Logo" width={110} height={110} />
-          <img src="/icons/figma.svg" alt="Figma Logo" width={110} height={110} />
-          <img src="/icons/vscode.svg" alt="VS Code Logo" width={110} height={110} />
-          <img src="/icons/github.svg" alt="GitHub Logo" width={110} height={110} />
-          <img src="/icons/javascript.svg" alt="JavaScript Logo" width={110} height={110} />
-          <img src="/icons/vercel.svg" alt="Vercel Logo" width={110} height={110} />
-          <img src="/icons/reactjs.svg" alt="React Logo" width={110} height={110} />
+          <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={80} height={80} />
+          <img src="/icons/adobe-photoshop.svg" alt="Adobe Photoshop Logo" width={80} height={80} />
+          <img src="/icons/adobe-indesign.svg" alt="Adobe InDesign Logo" width={80} height={80} />
+          <img src="/icons/after-effects.svg" alt="Adobe After Effects Logo" width={80} height={80} />
+          <img src="/icons/figma.svg" alt="Figma Logo" width={80} height={80} />
+          <img src="/icons/vscode.svg" alt="Adobe Illustrator Logo" width={80} height={80} />
+          <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={80} height={80} />
+          <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={80} height={80} />
+          <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={80} height={80} />
+          <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={80} height={80} />
         </div>
       </div>
     </main>

@@ -21,7 +21,7 @@ export default function HomePage() {
         <FtProj reversed={false}/> 
       </div>
       <div className={styles['Plat-sec']}>
-        <h1>PLATFORMS I CAN USE</h1>
+        <h1>PLATFORMS I CAN USE...</h1>
         <p>I use a wide variety of design and development tools to ensure quality meets the company and user needs.</p>
         <div className={styles['Plat-logos']}>
           <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={110} height={110} />

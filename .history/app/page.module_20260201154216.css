@@ -52,7 +52,7 @@
   font-family: raleway;
 }
 
-.intro-sec p {
+.intro-sec p{
   font-size: 1.5rem;
   max-width: 900px;
   line-height: 1.6;
@@ -139,21 +139,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .Plat-sec h1 {
   font-family: ghaista;
   color: #A2020C;
-}
-
-.Plat-sec p {
-  font-size: 1.5rem;
-  text-align: center;
-  max-width: 900px;
-  line-height: 1.6;
-  color: #333;
-  font-family: raleway;
 }
 
 .Plat-logos {
@@ -162,8 +153,6 @@
   grid-template-rows: 12px 12px 12px;
   gap: 8rem;
 }
-
-
 
 a.primary {
   background: var(--text-primary);
