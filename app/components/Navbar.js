@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <Link href="/" className={styles.logoContainer}>
         <Image
-          src="/logos/logo-name.svg"
+          src="/logos/Logo-name.svg"
           alt="Micaela Valmores"
             width={70}
           height={80}
