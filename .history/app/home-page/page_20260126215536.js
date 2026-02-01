@@ -1,0 +1,16 @@
+import Link from 'next/link'
+import styles from '../page.module.css'
+import FtProj from '../components/FtProj'
+
+export default function HomePage() {
+  return (
+    <main className={styles.page}>
+      <div className='Proj-sec'>
+        
+      </div>
+      <FtProj />
+      <FtProj />
+      <FtProj />
+    </main>
+  )
+}
