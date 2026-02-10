@@ -9,7 +9,6 @@ export default function CaseStudyPage() {
       <nav>
         <ul>
           <li><Link href="/home-page">Homepage</Link></li>
-          <li><Link href="/projects-page">Projects</Link></li>
         </ul>
       </nav>
     </main>

@@ -20,9 +20,6 @@ export default function Navbar() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/projects-page">Projects</Link>
-        </li>
-        <li>
           <Link href="/contact">Contact</Link>
         </li>
       </ul>
