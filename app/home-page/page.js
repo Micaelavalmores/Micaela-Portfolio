@@ -77,6 +77,34 @@ export default function HomePage() {
             )}
           </div>
         </div>
+        <div className={styles['about-sec']}>
+          <h1>ABOUT ME</h1>
+          <div className={styles['about-content']}>
+            <div className={styles['about-image']}>
+              <img src="/placeholder.png" alt="About Me" width={400} height={400} />
+            </div>
+            <div className={styles['about-text']}>
+              <h3>BACKGROUND</h3>
+              <p>Office ipsum you must be muted. Like sexy done give banner I'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
+              <blockquote className={styles['about-quote']}>
+                "Good design is a lot like clear thinking made visual."
+                <cite>—Edward Tufte</cite>
+              </blockquote>
+              <p>Office ipsum you must be muted. Like sexy done give banner I'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
+            </div>
+          </div>
+          <div className={styles['skills-section']}>
+            <h2>STUFF I'M GOOD AT</h2>
+            <div className={styles['skills-grid']}>
+              {["Designing", "Designing", "Designing", "Designing", "Designing", "Designing"].map((skill, index) => (
+                <div key={index} className={styles['skill-card']}>
+                  <div className={styles['skill-circle']}></div>
+                  <p>{skill}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className={styles['Plat-sec']}>
           <h1>PLATFORMS I CAN USE</h1>
           <p>I use a wide variety of design and development tools to ensure quality meets the company and user needs.</p>
