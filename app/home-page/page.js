@@ -1,10 +1,16 @@
+"use client"
+
 import Link from 'next/link'
 import styles from '../page.module.css'
-import FtProj from '../components/FtProj'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Chip from '../components/Chip'
+import ProjectNav from '../components/ProjectNav'
+import FtProj from '../components/FtProj'
+import DesignGallery from '../components/DesignGallery'
+import { useState } from 'react'
 
 export default function HomePage() {
+  const [activeTab, setActiveTab] = useState(0)
   return (
     <>
       <main className={styles.page}>
@@ -12,15 +18,64 @@ export default function HomePage() {
         </nav>  
         <Navbar />
         <div className={styles['intro-sec']}>
-          <span className={styles['intro-greet']}>Hi, I am a UX UI Designer</span>
+          <span className={styles['intro-greet']}>Hi, I am a UX/UI Designer</span>
           <h1>MICAELA VALMORES</h1> 
           <p>I turn complex problems into simple, accessible, and user-centred solutions that balance usability and aesthetics.</p>
+          <div className={styles['cta-buttons']}>
+            <Chip label="Send an Email" variant="filled" />
+            <Chip label="Download Resume" variant="outlined" />
+            </div>
         </div>
         <div className={styles['Proj-sec']}>
           <h1>FEATURED PROJECTS</h1>
-          <FtProj reversed={false}/>
-          <FtProj reversed={true} />
-          <FtProj reversed={false}/> 
+          <div className={styles['Proj-nav']}>
+            <ProjectNav tabs={["Case Study", "Design"]} onTabChange={(index) => setActiveTab(index)} />
+          </div>
+          <div className={styles['Proj-cards']}>
+            {activeTab === 0 ? (
+              <div className={styles['proj-grid']}>
+                {[
+                  {
+                    image: "/projects/Project-1.png",
+                    title: "Project Title 1",
+                    description: "Brief description of the project goes here. It should be concise and informative.",
+                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                  },
+                  {
+                    image: "/projects/Project-2.png",
+                    title: "Project Title 2",
+                    description: "Brief description of the project goes here. It should be concise and informative.",
+                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                  },
+                  {
+                    image: "/projects/Project-3.png",
+                    title: "Project Title 3",
+                    description: "Brief description of the project goes here. It should be concise and informative.",
+                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                  }
+                ].map((project, index) => (
+                  <FtProj
+                    key={index}
+                    image={project.image}
+                    title={project.title}
+                    description={project.description}
+                    tags={project.tags}
+                  />
+                ))}
+              </div>
+            ) : (
+              <DesignGallery 
+                designs={[
+                  { image: "/designs/Design-1.png", title: "Design 1" },
+                  { image: "/designs/Design-2.png", title: "Design 2" },
+                  { image: "/designs/Design-3.png", title: "Design 3" },
+                  { image: "/designs/Design-4.png", title: "Design 4" },
+                  { image: "/designs/Design-5.png", title: "Design 5" },                  
+                  { image: "/designs/Design-6.png", title: "Design 6" }
+                ]}
+              />
+            )}
+          </div>
         </div>
         <div className={styles['Plat-sec']}>
           <h1>PLATFORMS I CAN USE</h1>

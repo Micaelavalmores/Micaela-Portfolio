@@ -1,81 +1,52 @@
-.container {
-  width: 65rem;
-  height: 25rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  padding: 1rem 0;
-  margin: 5rem 0;
-}
-
-.container.reversed {
-  grid-template-columns: 1fr 1fr;
-}
-
-.reversed .textContent {
-  text-align: right;
-}
-
-.reversed .textColumn {
-  text-align: right;
-}
-
-.reversed .projectButton {
-  justify-self: end;
-}
-
-.imagesColumn {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.2rem;
-  width: 40rem;
-}
-
-.imagePlaceholder {
-  width: 100%;
-  height: 100%;
-  background-color: #e0e0e0;
-  border-radius: 0.2rem;
-}
-
-.textColumn {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 2rem;
-}
-
-.textContent {
+.card {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
 }
 
-.textColumn h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.75rem;
-  font-family: ghaista;
+.imageContainer {
+  width: 100%;
+  height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.textColumn p {
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  word-break: break-word;
+  overflow-wrap: break-word;
   margin: 0;
-  line-height: 1.6;
+}
+
+.description {
+  font-size: 1rem;
   color: #333;
-  font-size: 1rem;
-  font-family: raleway;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  line-height: 1.5;
 }
 
-.projectButton {
-  align-self: start;
-  width: 10rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #A2020C;
-  color: #fff;
-  border: none;
-  border-radius: 5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  font-family: raleway;
-}
-
-.projectButton:hover {
-  background-color: #b62d36;
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
 }
