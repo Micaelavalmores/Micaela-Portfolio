@@ -7,6 +7,7 @@ import Chip from '../components/Chip'
 import ProjectNav from '../components/ProjectNav'
 import FtProj from '../components/FtProj'
 import DesignGallery from '../components/DesignGallery'
+import Contact from '../components/Contact'
 import { useState } from 'react'
 
 export default function HomePage() {
@@ -118,6 +119,10 @@ export default function HomePage() {
             <img src="/icons/vercel.svg" alt="Vercel Logo" width={110} height={110} />
             <img src="/icons/vscode.svg" alt="VS Code Logo" width={110} height={110} />
           </div>
+        </div>
+        <div className={styles['contact-sec']}>
+          <h1>READY TO CONNECT?</h1>
+          <Contact />
         </div>
       </main>
     </>

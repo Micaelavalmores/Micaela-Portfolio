@@ -294,7 +294,22 @@
   flex-wrap: wrap;
 }
 
+.contact-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+  background-color: #ffff;
+  margin: 9rem 0;
+  font-family: inherit;
+  color: #333;
+}
 
+.contact-sec h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
 
 a.primary {
   background: var(--text-primary);
