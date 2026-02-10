@@ -81,23 +81,23 @@ export default function HomePage() {
           <h1>ABOUT ME</h1>
           <div className={styles['about-content']}>
             <div className={styles['about-image']}>
-              <img src="/placeholder.png" alt="About Me" width={400} height={400} />
+              <img src="/about-image.jpg" alt="Profile" width={500} height={400} />
             </div>
             <div className={styles['about-text']}>
-              <h3>BACKGROUND</h3>
-              <p>Office ipsum you must be muted. Like sexy done give banner I'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
+              <h2>BACKGROUND</h2>
+              <p>Office ipsum you must be muted. Like sexy done give banner i'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
               <blockquote className={styles['about-quote']}>
                 "Good design is a lot like clear thinking made visual."
-                <cite>—Edward Tufte</cite>
+                <footer>—Edward Tufte</footer>
               </blockquote>
-              <p>Office ipsum you must be muted. Like sexy done give banner I'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
+              <p>Office ipsum you must be muted. Like sexy done give banner i'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
             </div>
           </div>
-          <div className={styles['skills-section']}>
+          <div className={styles['about-skills']}>
             <h2>STUFF I'M GOOD AT</h2>
             <div className={styles['skills-grid']}>
-              {["Designing", "Designing", "Designing", "Designing", "Designing", "Designing"].map((skill, index) => (
-                <div key={index} className={styles['skill-card']}>
+              {['Designing', 'Designing', 'Designing', 'Designing', 'Designing', 'Designing'].map((skill, index) => (
+                <div key={index} className={styles['skill-item']}>
                   <div className={styles['skill-circle']}></div>
                   <p>{skill}</p>
                 </div>
@@ -106,19 +106,17 @@ export default function HomePage() {
           </div>
         </div>
         <div className={styles['Plat-sec']}>
-          <h1>PLATFORMS I CAN USE</h1>
-          <p>I use a wide variety of design and development tools to ensure quality meets the company and user needs.</p>
+          <h1>TOOLS I CAN USE</h1>
           <div className={styles['Plat-logos']}>
-            <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={110} height={110} />
-            <img src="/icons/adobe-photoshop.svg" alt="Adobe Photoshop Logo" width={110} height={110} />
-            <img src="/icons/adobe-indesign.svg" alt="Adobe InDesign Logo" width={110} height={110} />
-            <img src="/icons/after-effects.svg" alt="Adobe After Effects Logo" width={110} height={110} />
-            <img src="/icons/figma.svg" alt="Figma Logo" width={110} height={110} />
-            <img src="/icons/vscode.svg" alt="VS Code Logo" width={110} height={110} />
             <img src="/icons/github.svg" alt="GitHub Logo" width={110} height={110} />
-            <img src="/icons/javascript.svg" alt="JavaScript Logo" width={110} height={110} />
-            <img src="/icons/vercel.svg" alt="Vercel Logo" width={110} height={110} />
+            <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={110} height={110} />
+            <img src="/icons/after-effects.svg" alt="Adobe After Effects Logo" width={110} height={110} />
+            <img src="/icons/adobe-photoshop.svg" alt="Adobe Photoshop Logo" width={110} height={110} />
+            <img src="/icons/figma.svg" alt="Figma Logo" width={110} height={110} />
+            <img src="/icons/adobe-indesign.svg" alt="Adobe InDesign Logo" width={110} height={110} />
             <img src="/icons/reactjs.svg" alt="React Logo" width={110} height={110} />
+            <img src="/icons/vercel.svg" alt="Vercel Logo" width={110} height={110} />
+            <img src="/icons/vscode.svg" alt="VS Code Logo" width={110} height={110} />
           </div>
         </div>
       </main>

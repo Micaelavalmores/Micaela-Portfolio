@@ -45,42 +45,42 @@
 .about-sec {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   padding: 2rem 0;
-  margin: 2rem 0;
+  background-color: #ffff;
+  margin: 9rem 0;
+  font-family: inherit;
   color: #333;
 }
 
 .about-sec h1 {
   font-size: 3rem;
   font-weight: bold;
-  margin: 0;
 }
 
 .about-sec h2 {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: start;
 }
 
 .about-image {
   width: 100%;
-  height: 400px;
-  background-color: #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .about-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  background-color: #e0e0e0;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -90,67 +90,70 @@
   gap: 1.5rem;
 }
 
-.about-text h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .about-text p {
   font-size: 1rem;
   line-height: 1.6;
-  margin: 0;
   color: #333;
 }
 
 .about-quote {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-style: italic;
   text-align: center;
-  margin: 1rem 0;
   padding: 2rem;
   color: #000;
-  font-weight: 500;
-  border-left: 4px solid #A2020C;
-  padding-left: 1.5rem;
-  line-height: 1.8;
+  border-left: none;
+  margin: 1rem 0;
 }
 
-.about-quote cite {
+.about-quote footer {
   display: block;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   text-align: right;
   margin-top: 1rem;
   color: #333;
 }
 
-.skills-section {
+.about-skills {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.about-skills h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
+  align-items: center;
 }
 
-.skill-card {
+.skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  text-align: center;
 }
 
 .skill-circle {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background-color: #e0e0e0;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
 }
 
 .intro-sec {
@@ -268,30 +271,27 @@
 .Plat-sec {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   gap: 3rem;
+  font-family: inherit;
+  text-align: left;
 }
 
 .Plat-sec h1 {
-  font-family: ghaista;
-  color: #A2020C;
-}
-
-.Plat-sec p {
-  font-size: 1.5rem;
-  text-align: center;
-  max-width: 900px;
-  line-height: 1.6;
-  color: #333;
-  font-family: raleway;
+  font-size: 3rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #000;
+  align-items: flex-start;
 }
 
 .Plat-logos {
-  display: grid;
-  grid-template-columns: 12px 12px 12px 12px 12px;
-  grid-template-rows: 12px 12px 12px;
-  gap: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 
