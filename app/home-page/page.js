@@ -38,15 +38,15 @@ export default function HomePage() {
                 {[
                   {
                     image: "/projects/Project-1.png",
-                    title: "Project Title 1",
-                    description: "Brief description of the project goes here. It should be concise and informative.",
-                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                    title: "Designing an App for Struggling Apprentices",
+                    description: "Got It is a webapp that help neurodiverse electrical apprentices turn dense study materials into accessible, easier-to-understand learning content. It lets students upload their own documents or open built‑in textbooks, then uses AI tools to simplify text, generate summaries, and create mind maps so they can quickly see the “big picture” and key points. ",
+                    tags: ["UX/UI Design", "User Research", "UX Strategist", "Secondary Researcher", "AI Study Platform", "Development"]
                   },
                   {
                     image: "/projects/Project-2.png",
-                    title: "Project Title 2",
-                    description: "Brief description of the project goes here. It should be concise and informative.",
-                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                    title: "Building a Safer Peer-to-Peer Rental Experience",
+                    description: "LendItOut is an all-in-one marketplace that allows users to rent, buy, and sell items in one seamless platform. Unlike traditional marketplaces, which focus solely on buying and selling, LendItOut is built around flexibility; letting people temporarily borrow what they need and purchase it later if desired.",
+                    tags: ["UX/UI Design", "UX Research", "Product Design", "Interaction Design", "Trust and Safety Design", "Online Marketplace Design"]
                   },
                   {
                     image: "/projects/Project-3.png",

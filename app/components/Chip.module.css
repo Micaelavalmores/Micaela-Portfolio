@@ -24,8 +24,8 @@
 
 .outlined {
   background-color: #ffffff;
-  color: #A2020C;
-  border: 2px solid #A2020C;
+  color: #333;
+  border: 1px solid #333;
 }
 
 /* .outlined:hover {
