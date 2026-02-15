@@ -37,22 +37,25 @@ export default function HomePage() {
               <div className={styles['proj-grid']}>
                 {[
                   {
-                    image: "/projects/Project-1.png",
-                    title: "Designing an App for Struggling Apprentices",
+                    image: "/images/Got-It.png",
+                    title: "Got It: An App for Struggling Apprentices",
                     description: "Got It is a webapp that help neurodiverse electrical apprentices turn dense study materials into accessible, easier-to-understand learning content. It lets students upload their own documents or open built‑in textbooks, then uses AI tools to simplify text, generate summaries, and create mind maps so they can quickly see the “big picture” and key points. ",
-                    tags: ["UX/UI Design", "User Research", "UX Strategist", "Secondary Researcher", "AI Study Platform", "Development"]
+                    tags: ["UX/UI Design", "User Research", "UX Strategist", "Secondary Researcher", "AI Study Platform", "Development"],
+                    href: "/case-study/got-it"
                   },
                   {
                     image: "/projects/Project-2.png",
                     title: "Building a Safer Peer-to-Peer Rental Experience",
                     description: "LendItOut is an all-in-one marketplace that allows users to rent, buy, and sell items in one seamless platform. Unlike traditional marketplaces, which focus solely on buying and selling, LendItOut is built around flexibility; letting people temporarily borrow what they need and purchase it later if desired.",
-                    tags: ["UX/UI Design", "UX Research", "Product Design", "Interaction Design", "Trust and Safety Design", "Online Marketplace Design"]
+                    tags: ["UX/UI Design", "UX Research", "Product Design", "Interaction Design", "Trust and Safety Design", "Online Marketplace Design"],
+                    href: "/"
                   },
                   {
                     image: "/projects/Project-3.png",
                     title: "Project Title 3",
                     description: "Brief description of the project goes here. It should be concise and informative.",
-                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                    tags: ["UX/UI Design", "Prototyping", "Development"],
+                    href: "/"
                   }
                 ].map((project, index) => (
                   <FtProj
@@ -61,6 +64,7 @@ export default function HomePage() {
                     title={project.title}
                     description={project.description}
                     tags={project.tags}
+                    href={project.href}
                   />
                 ))}
               </div>
