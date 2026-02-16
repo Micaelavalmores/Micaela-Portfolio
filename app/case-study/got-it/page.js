@@ -17,6 +17,17 @@ export default function GotItCaseStudy() {
   ]
 
   useEffect(() => {
+    const savedTab = window.localStorage.getItem('got-it-active-tab')
+    if (savedTab) {
+      setActiveTab(savedTab)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem('got-it-active-tab', activeTab)
+  }, [activeTab])
+
+  useEffect(() => {
     if (!expandedImage) return
 
     const handleKeyDown = (event) => {
@@ -262,8 +273,33 @@ export default function GotItCaseStudy() {
 
                 {activeTab === 'design' && (
                   <div className={styles['tab-pane']}>
-                    <h3>Design</h3>
-                    <p>Add your design content here</p>
+                    <div className={styles['design-content']}>
+                      <div className={styles['design-intro-section']}>
+                        <div className={styles['design-intro']}>
+                          <h4>How we designed it</h4>
+                          <p>Drawing on the research I conducted with my team, I developed design recommendations that addressed accessibility and ease of use for non–tech-savvy and neurodiverse electrical students. Based on user interviews and usability testing, I identified challenges such as confusing navigation, inconsistent layouts, and unnecessary interface complexity. In response, I advocated for a simplified design emphasizing clear structure, predictable patterns, and minimal cognitive load so learners could quickly understand and confidently repeat key workflows.</p>
+                        </div>
+                        <div className={styles['design-gallery']}>
+                          <div className={styles['design-tile']} aria-hidden="true" />
+                          <div className={styles['design-tile']} aria-hidden="true" />
+                          <div className={styles['design-tile']} aria-hidden="true" />
+                          <div className={styles['design-tile']} aria-hidden="true" />
+                        </div>
+                      </div>
+
+                        <div className={styles['design-copy']}>
+                          <h4>Minimizing Cognitive Load Through Visual Consistency</h4>
+                            <p>Grounded in user research and accessibility best practices, my design recommendations focused on creating a digital learning environment that supports clarity, predictability, and sustained focus. The goal was to help non–tech-savvy and neurodiverse electrical students interact with the platform confidently, learn key workflows efficiently, and minimize the mental effort often required by overly complex systems.</p>
+                          <ul className={styles['design-bullet-list']}>
+                            <li><strong>Simplified interface and interaction model:</strong> I advocated for an interface built around recognizable patterns, streamlined task flows, and clear labeling, allowing learners to easily predict what actions to take next without confusion or hesitation.</li>
+                            <li><strong>Prioritization of cognitive simplicity:</strong> By minimizing unnecessary visual and functional complexity, I aimed to lower cognitive load, enabling users to grasp essential features quickly and retain comfort as they repeated tasks across sessions.</li>
+                            <li><strong>Intuitive navigation system:</strong> I emphasized the need for clear wayfinding cues—such as consistent menu placement, breadcrumb trails, and progressive disclosure—to help learners move through content confidently without getting lost or overwhelmed.</li>
+                            <li><strong>Consistent visual hierarchy:</strong> Through deliberate typographic and spatial design choices, I sought to establish a rhythm of attention that guides the eye naturally from key content to supporting elements, reducing decision fatigue and improving comprehension.</li>
+                            <li><strong>Reduction of visual clutter:</strong> I recommended limiting on-screen information to what is contextually necessary, using whitespace and simplified layouts to create breathing room and reduce distraction—especially beneficial for users with attention differences.</li>
+                            <li><strong>Seamless integration of textbook content:</strong> To reduce context switching, I proposed embedding required course materials directly into the learning platform. This integration allows students to access official references and supportive features within a single consistent environment, maintaining focus and continuity during study sessions.</li>
+                          </ul>
+                        </div>
+                    </div>
                   </div>
                 )}
 
