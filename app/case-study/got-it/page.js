@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import styles from '../../page.module.css'
 import Navbar from '../../components/Navbar'
 
 export default function GotItCaseStudy() {
   const [activeTab, setActiveTab] = useState('research')
+  const [expandedImage, setExpandedImage] = useState(null)
 
   const tabs = [
     { id: 'research', label: 'Research' },
@@ -14,6 +15,23 @@ export default function GotItCaseStudy() {
     { id: 'testing', label: 'Testing' },
     { id: 'result', label: 'Result' },
   ]
+
+  useEffect(() => {
+    if (!expandedImage) return
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setExpandedImage(null)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [expandedImage])
+
+  const openImage = (src, alt) => {
+    setExpandedImage({ src, alt })
+  }
 
   return (
     <>
@@ -26,7 +44,18 @@ export default function GotItCaseStudy() {
             </div> */}
 
             <div className={styles['case-study-hero-image']}>
-            <img src="/images/Got-It.png" alt="Got It project" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img
+              src="/images/Got-It.png"
+              alt="Got It project"
+              className={styles['zoomable-image']}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              onClick={() => openImage('/images/Got-It.png', 'Got It project')}
+            />
+            <span className={styles['zoom-indicator']} aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 2a8 8 0 105.292 14.022l4.343 4.343a1 1 0 001.414-1.414l-4.343-4.343A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12zm1 2a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V6z" fill="currentColor" />
+              </svg>
+            </span>
             </div>
 
             <div className={styles['case-study-overview']}>
@@ -113,30 +142,103 @@ export default function GotItCaseStudy() {
                         <div className={styles['research-block']}>
                           <h4>Digital Comfort and Textbook Barriers</h4>
                           <p>In leading this research at BCIT, I found neurodiverse electrical students rely on personal laptops with moderate digital comfort, but textbook-heavy materials—especially dense math and Canadian Electrical Code with small fonts, jargon, and few visuals—leave those with learning disabilities discouraged and behind.</p>
-                          <div className={styles['research-image']}></div>
+                          <div className={styles['research-image']}>
+                            <img
+                              src="/images/caseStudyImages/got-it-research-img1.png"
+                              alt="Got It research insight"
+                              className={styles['zoomable-image']}
+                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                              onClick={() => openImage('/images/caseStudyImages/got-it-research-img1.png', 'Got It research insight')}
+                            />
+                            <span className={styles['research-image-caption']}>
+                              Results from User Survey
+                            </span>
+                          </div>
                         </div>
                         <div className={styles['research-block']}>
                           <h4>Study Organization Struggles and Coping Strategies</h4>
                           <p>Participants struggle to start studying and organize complex material, coping by breaking down text, highlighting, note-taking, repeating concepts, and using hands-on practice, step-by-step visuals, diagrams, and YouTube tutorials.</p>
-                          <div className={styles['research-image']}></div>
+                          <div className={styles['research-image']}>
+                            <img
+                                src="/images/caseStudyImages/got-it-research-img3.png"
+                                alt="Got It research insight"
+                                className={styles['zoomable-image']}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img3.png', 'Got It research insight')}
+                              />
+                            <span className={styles['research-image-caption']}>
+                              Results from User Survey
+                            </span>
+                          </div>
                         </div>
                       </div>
 
+                      
                       {/* Two Column Section */}
                       <div className={styles['research-two-col']}>
                         <div className={styles['research-block']}>
                           <h4>Accessibility Gaps and Specific Pain Points</h4>
                           <p>I also discovered low awareness and mixed experiences with BCIT accessibility services, along with pain points like confusing acronyms, limited real-world examples, overly technical language, scarce practice exams, and scattered resources.</p>
+                          <div className={styles['research-image']}>
+                            <img
+                                src="/images/caseStudyImages/got-it-research-img4.png"
+                                alt="Got It research insight"
+                                className={styles['zoomable-image']}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img4.png', 'Got It research insight')}
+                              />
+                            <span className={styles['research-image-caption']}>
+                              Results from User Survey
+                            </span>
+                          </div>
                         </div>
                         <div className={styles['research-block']}>
                           <h4>Recommended Tool Solutions</h4>
                           <p>Based on these insights, I recommended a tool with strong visual supports, simplified language/glossary, diverse learning modes, accessibility settings, offline access, search, annotation, and printable cheat sheets.</p>
+                          <div className={styles['research-image']}>
+                            <img
+                                src="/images/caseStudyImages/got-it-research-img5.png"
+                                alt="Got It research insight"
+                                className={styles['zoomable-image']}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img5.png', 'Got It research insight')}
+                              />
+                            <span className={styles['research-image-caption']}>
+                              Results from User Survey
+                            </span>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Two Column with Split Layout */}
-                      <div className={styles['research-split']}>
-                        <div className={styles['research-image-half']}></div>
+                      <div className={styles['research-text-split']}>
+                        <div className={styles['research-text-image']}>
+                          <div className={styles['research-image-two-col']}>
+                            <div className={styles['research-image-half']}>
+                              <img
+                                src="/images/caseStudyImages/got-it-research-img6.png"
+                                alt="Got It research insight"
+                                className={styles['zoomable-image']}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img6.png', 'Got It research insight')}
+                              />
+                              <span className={styles['research-image-caption']}>
+                                Results from User Survey
+                              </span>
+                            </div>
+                            <div className={styles['research-image-half']}>
+                              <img
+                                src="/images/caseStudyImages/got-it-research-img7.png"
+                                alt="Got It research insight"
+                                className={styles['zoomable-image']}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img7.png', 'Got It research insight')}
+                              />
+                              <span className={styles['research-image-caption']}>
+                                Results from User Survey
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                         <div className={styles['research-text-half']}>
                           <h4>This was the approach we went with</h4>
                           <p>The research led us to conceptualize a web application that consolidates students' fragmented study methods into a single, cohesive platform tailored to neurodiverse learners.</p>
@@ -188,6 +290,30 @@ export default function GotItCaseStudy() {
             </div>
         </div>
       </main>
+
+      {expandedImage && (
+        <div
+          className={styles['image-modal']}
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setExpandedImage(null)}
+        >
+          <button
+            type="button"
+            className={styles['image-modal-close']}
+            onClick={() => setExpandedImage(null)}
+            aria-label="Close image preview"
+          >
+            ×
+          </button>
+          <img
+            src={expandedImage.src}
+            alt={expandedImage.alt}
+            className={styles['image-modal-image']}
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   )
 }
