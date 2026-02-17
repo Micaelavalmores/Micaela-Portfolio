@@ -11,7 +11,7 @@ export default function FtProj({
   href = "/",
 }) {
   return (
-    <Link href={href}>
+    <Link href={href} className={styles.cardLink}>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <Image

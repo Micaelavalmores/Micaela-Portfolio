@@ -23,8 +23,8 @@ export default function HomePage() {
           <h1>MICAELA VALMORES</h1> 
           <p>I turn complex problems into simple, accessible, and user-centred solutions that balance usability and aesthetics.</p>
           <div className={styles['cta-buttons']}>
-            <Chip label="Send an Email" variant="filled" />
-            <Chip label="Download Resume" variant="outlined" />
+            <Chip label="Send an Email" variant="filled" className={styles['cta-chip']} />
+            <Chip label="Download Resume" variant="outlined" className={styles['cta-chip']} />
             </div>
         </div>
         <div className={styles['Proj-sec']}>
@@ -49,14 +49,14 @@ export default function HomePage() {
                     description: "LendItOut is an all-in-one marketplace that allows users to rent, buy, and sell items in one seamless platform. Unlike traditional marketplaces, which focus solely on buying and selling, LendItOut is built around flexibility; letting people temporarily borrow what they need and purchase it later if desired.",
                     tags: ["UX/UI Design", "UX Research", "Product Design", "Interaction Design", "Trust and Safety Design", "Online Marketplace Design"],
                     href: "/"
-                  },
-                  {
-                    image: "/projects/Project-3.png",
-                    title: "Project Title 3",
-                    description: "Brief description of the project goes here. It should be concise and informative.",
-                    tags: ["UX/UI Design", "Prototyping", "Development"],
-                    href: "/"
                   }
+                  // {
+                  //   image: "/projects/Project-3.png",
+                  //   title: "Project Title 3",
+                  //   description: "Brief description of the project goes here. It should be concise and informative.",
+                  //   tags: ["UX/UI Design", "Prototyping", "Development"],
+                  //   href: "/"
+                  // }
                 ].map((project, index) => (
                   <FtProj
                     key={index}
