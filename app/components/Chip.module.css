@@ -1,0 +1,54 @@
+.chip {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  font-family: inherit;
+  text-align: center;
+  font-weight: bold;
+}
+
+.filled {
+  background-color: #A2020C;
+  color: #ffffff;
+}
+
+/* .filled:hover {
+  background-color: #6d2e2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 58, 58, 0.3);
+} */
+
+.outlined {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.outlined:hover {
+  background-color: rgba(162, 2, 12, 0.06);
+  border-color: rgba(162, 2, 12, 0.2);
+  box-shadow: 0 10px 24px rgba(162, 2, 12, 0.12);
+  transform: translateY(-2px);
+}
+
+.filled:hover {
+  background-color: #A2020C;
+  box-shadow: 0 10px 24px rgba(162, 2, 12, 0.2);
+  transform: translateY(-2px);
+}
+
+/* .outlined:hover {
+  background-color: #f5f5f5;
+  border-color: #6d2e2e;
+  color: #6d2e2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 58, 58, 0.2);
+}
+
+.chip:active {
+  transform: translateY(0);
+} */

@@ -1,63 +1,39 @@
-'use client';
+import Link from "next/link";
+import Image from "next/image";
+import Chip from "./Chip";
+import styles from "./FtProj.module.css";
 
-import styles from './FtProj.module.css';
-
-/*
-  HOW TO USE:
-  The FtProj component has two layout states controlled by the reversed prop:
-  1. Default (reversed={false}): Images on left, text on right (left-justified)
-  2. Reversed (reversed={true}): Text on left (right-justified), images on right
-  
-  Layout changes can only be controlled in the backend by passing the reversed prop.
-  Users cannot change the layout.
-  
-  Usage examples:
-  <FtProj /> - Standard layout
-  <FtProj reversed={true} /> - Reversed layout
-*/
-
-export default function FtProj({ reversed = false }) {
+export default function FtProj({
+  image = "/placeholder.png",
+  title = "TITLE OF THIS CASE",
+  description = "Office ipsum you must be muted. Wanted these client it's keep keywords marginalised whistles.",
+  tags = ["UX/UI Design", "Prototyping", "Development"],
+  href = "/",
+}) {
   return (
-    <div className={`${styles.container} ${reversed ? styles.reversed : ''}`}>
-      {/* Left Column - Text (if reversed) / Images (if standard) */}
-      {!reversed ? (
-        // Standard: Images on left
-        <div className={styles.imagesColumn}>
-          <div className={styles.imagePlaceholder}></div>
-          <div className={styles.imagePlaceholder}></div>
-          <div className={styles.imagePlaceholder}></div>
-          <div className={styles.imagePlaceholder}></div>
+    <Link href={href} className={styles.cardLink}>
+      <div className={styles.card}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={image}
+            alt={title}
+            width={400}
+            height={400}
+            className={styles.image}
+          />
         </div>
-      ) : (
-        // Reversed: Text on left
-        <div className={styles.textColumn}>
-          <div className={styles.textContent}>
-            <h2>Project Title</h2>
-            <p>Add your project description here. This section can contain details about the project, your role, technologies used, and key achievements.</p>
-          </div>
-          <button className={styles.projectButton}>More Details</button>
-        </div>
-      )}
 
-      {/* Right Column - Text (if standard) / Images (if reversed) */}
-      {!reversed ? (
-        // Standard: Text on right
-        <div className={styles.textColumn}>
-          <div className={styles.textContent}>
-            <h2>Project Title</h2>
-            <p>Add your project description here. This section can contain details about the project, your role, technologies used, and key achievements.</p>
+        <div className={styles.content}>
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.description}>{description}</p>
+
+          <div className={styles.tagsContainer}>
+            {tags.map((tag, index) => (
+              <Chip key={index} label={tag} variant="outlined" />
+            ))}
           </div>
-          <button className={styles.projectButton}>More Details</button>
         </div>
-      ) : (
-        // Reversed: Images on right
-        <div className={styles.imagesColumn}>
-          <div className={styles.imagePlaceholder}></div>
-          <div className={styles.imagePlaceholder}></div>
-          <div className={styles.imagePlaceholder}></div>
-          <div className={styles.imagePlaceholder}></div>
-        </div>
-      )}
-    </div>
+      </div>
+    </Link>
   );
 }

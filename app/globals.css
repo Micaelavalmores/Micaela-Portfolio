@@ -31,6 +31,8 @@ body {
   font-family: var(--font-raleway);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 * {
