@@ -280,12 +280,53 @@ export default function GotItCaseStudy() {
                           <p>Drawing on the research I conducted with my team, I developed design recommendations that addressed accessibility and ease of use for non–tech-savvy and neurodiverse electrical students. Based on user interviews and usability testing, I identified challenges such as confusing navigation, inconsistent layouts, and unnecessary interface complexity. In response, I advocated for a simplified design emphasizing clear structure, predictable patterns, and minimal cognitive load so learners could quickly understand and confidently repeat key workflows.</p>
                         </div>
                         <div className={styles['design-gallery']}>
-                          <div className={styles['design-tile']} aria-hidden="true" />
-                          <div className={styles['design-tile']} aria-hidden="true" />
-                          <div className={styles['design-tile']} aria-hidden="true" />
-                          <div className={styles['design-tile']} aria-hidden="true" />
+                          <div className={styles['design-tile']} aria-hidden="true" >
+                            <img
+                                src="/images/caseStudyImages/got-it-design-img1.png"
+                                alt="Got It design insight"
+                                className={styles['zoomable-image']}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-design-img1.png', 'Got It design insight')}
+                              />
+                              <span className={styles['research-image-caption']}>
+                                Images of Got It WebApp
+                              </span>
+                          </div>
+                          <div className={styles['design-tile']} aria-hidden="true" >
+                            <img
+                                src="/images/caseStudyImages/got-it-design-img2.png"
+                                alt="Got It design insight"
+                                className={styles['zoomable-image']}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-design-img2.png', 'Got It design insight')}
+                              />
+                              <span className={styles['research-image-caption']}>
+                                Images of Got It WebApp
+                              </span>
+                          </div>
+                          <div className={styles['design-tile']} aria-hidden="true" >
+                            <img
+                                src="/images/caseStudyImages/got-it-design-img3.png"
+                                alt="Got It design insight"
+                                className={styles['zoomable-image']}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-design-img3.png', 'Got It design insight')}
+                              />
+                              <span className={styles['research-image-caption']}>
+                                Images of Got It WebApp
+                              </span>
+                          </div>
+                          <div className={styles['design-tile']} aria-hidden="true" >
+                            <img
+                                src="/images/caseStudyImages/got-it-design-img4.png"
+                                alt="Got It design insight"
+                                className={styles['zoomable-image']}
+                                onClick={() => openImage('/images/caseStudyImages/got-it-design-img4.png', 'Got It design insight')}
+                              />
+                              <span className={styles['research-image-caption']}>
+                                Images of Got It WebApp
+                              </span>
+                          </div>
                         </div>
                       </div>
+                      
 
                         <div className={styles['design-copy']}>
                           <h4>Minimizing Cognitive Load Through Visual Consistency</h4>
@@ -298,6 +339,17 @@ export default function GotItCaseStudy() {
                             <li><strong>Reduction of visual clutter:</strong> I recommended limiting on-screen information to what is contextually necessary, using whitespace and simplified layouts to create breathing room and reduce distraction—especially beneficial for users with attention differences.</li>
                             <li><strong>Seamless integration of textbook content:</strong> To reduce context switching, I proposed embedding required course materials directly into the learning platform. This integration allows students to access official references and supportive features within a single consistent environment, maintaining focus and continuity during study sessions.</li>
                           </ul>
+                          <div className={styles['design-tile']} aria-hidden="true">
+                        <img
+                          src="/images/caseStudyImages/got-it-design-img5.png"
+                          alt="Got It design insight"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/got-it-design-img5.png', 'Got It design insight')}
+                        />
+                        <span className={styles['research-image-caption']}>
+                          Images of Got It WebApp
+                        </span>
+                      </div>
                         </div>
                     </div>
                   </div>
@@ -305,8 +357,55 @@ export default function GotItCaseStudy() {
 
                 {activeTab === 'testing' && (
                   <div className={styles['tab-pane']}>
-                    <h3>Testing</h3>
-                    <p>Add your testing content here</p>
+                    <div className={styles['testing-content']}>
+                      <div className={styles['testing-top']}>
+                        <div className={styles['testing-media-grid']}>
+                          <div className={styles['testing-image']} aria-hidden="true">
+                          <img
+                            src="/images/caseStudyImages/got-it-testing-img1.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-testing-img1.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Sample From Usability Testing Session
+                          </span>
+                          </div>
+                          <div className={styles['testing-image']} aria-hidden="true">
+                            <img
+                            src="/images/caseStudyImages/got-it-testing-img2.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-testing-img2.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Sample From Usability Testing Session
+                          </span>
+                          </div>
+                        </div>
+                        <div className={styles['testing-text-block']}>
+                          <h4>Putting the First Prototype to the Test</h4>
+                          <p>During this testing phase, I led usability sessions to validate our first iteration and gather actionable insights for the next version of the Got It web application.</p>
+                          <p>The primary goal was to understand how neurodiverse electrical apprentices interacted with key workflows and to identify barriers that might hinder their learning experience.</p>
+                          <p>Overall, participants reported that the core flows—uploading documents, opening built-in textbooks, generating AI outputs, saving or printing content, and renaming study cards—were generally easy to complete once discovered. Several users specifically mentioned that the interface “flows nicely,” feels predictable, and would likely support their study routines by reducing friction and confusion.</p>
+                        </div>
+                      </div>
+
+                      <div className={styles['testing-bottom']}>
+                        <div className={styles['testing-text-block']}>
+                          <h4>Key Issues Revealed Through Testing</h4>
+                          <p>However, testing also exposed several areas that required improvement.</p>
+                          <p>The most notable issues included unclear iconography, limited upload feedback, insufficient clarification of AI functionality, visually overwhelming mind map designs, unintuitive split-screen interactions, and unexpected toolbar behavior. These findings guided the design changes I pursued with our team.</p>
+                          <p>I collaborated closely with our designers to refine the icon system, advocating for more generalized, widely recognized icons to support recognition and memorability, and pairing them with concise tooltips where appropriate to clearly communicate purpose.</p>
+                        </div>
+                        <div className={styles['testing-text-block']}>
+                          <h4>Redesigning AI Interactions for Better Understanding</h4>
+                          <p>For AI functionality, I focused on making this core feature more transparent and approachable. </p>
+                          <p>The initial design relied heavily on icons alone, which caused confusion around what actions “summarize,” “simplify,” and “mind map” would perform.</p>
+                          <p>I proposed adding short, persistent textual descriptions directly beneath each AI option so users could immediately understand the outcome of their selection without having to hover or guess. I intentionally avoided relying solely on tooltips for these controls, as the AI capabilities are central to the product’s value and should be clearly explained at a glance.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
 
