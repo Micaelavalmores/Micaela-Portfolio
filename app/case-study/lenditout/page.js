@@ -1,11 +1,12 @@
 "use client"
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../../page.module.css'
 import Navbar from '../../components/Navbar'
 
 export default function LendItOutCaseStudy() {
   const [activeTab, setActiveTab] = useState('research')
+  const [expandedImage, setExpandedImage] = useState(null)
   const tabs = [
     { id: 'research', label: 'Research' },
     { id: 'design', label: 'Design' },
@@ -13,18 +14,43 @@ export default function LendItOutCaseStudy() {
     { id: 'result', label: 'Result' },
   ]
 
-  return (
-    <main className={styles.page}>
-      <div className={styles['case-study-body']}>
-        <Navbar />
+  useEffect(() => {
+    if (!expandedImage) return
 
-        <div className={styles['case-study-hero-image']}>
-          <img
-            src="/projects/Project-2.png"
-            alt="LendItOut project hero"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-        </div>
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setExpandedImage(null)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [expandedImage])
+
+  const openImage = (src, alt) => {
+    setExpandedImage({ src, alt })
+  }
+
+  return (
+    <>
+      <main className={styles.page}>
+        <div className={styles['case-study-body']}>
+          <Navbar />
+
+          <div className={styles['case-study-hero-image']}>
+            <img
+              src="/images/caseStudyImages/lenditoutcover.png"
+              alt="LendItOut project hero"
+              className={styles['zoomable-image']}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              onClick={() => openImage('/images/caseStudyImages/lenditoutcover.png', 'LendItOut project hero')}
+            />
+            <span className={styles['zoom-indicator']} aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 2a8 8 0 105.292 14.022l4.343 4.343a1 1 0 001.414-1.414l-4.343-4.343A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12zm1 2a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V6z" fill="currentColor" />
+              </svg>
+            </span>
+          </div>
 
         <div className={styles['case-study-overview']}>
           <div className={styles['case-study-title-section']}>
@@ -64,7 +90,6 @@ export default function LendItOutCaseStudy() {
               <p>
                 LendItOut is an all-in-one marketplace that allows users to rent, buy, and sell items in one seamless platform. 
 Unlike traditional marketplaces, which focus solely on buying and selling, LendItOut is built around flexibility; letting people temporarily borrow what they need and purchase it later if desired.
-
               </p>
 
               <h3>What was the result</h3>
@@ -102,7 +127,7 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                     <div className={styles['research-block']}>
                       <h4>User Research Reveals Marketplace Pain Points</h4>
                       <p>
-                       Using insights from our user research, our team identified critical pain points hindering peer-to-peer marketplaces: trust and safety gaps like scams, fake reviews, and payment insecurity; rental liability fears around damage, loss, or unclear responsibility; cumbersome onboarding processes and core user flows that demand too much effort; poor inter-user communication leading to misunderstandings; inaccurate product listings misrepresenting quality or condition; ineffective search tools and availability tracking; and pricing frustrations where fair market value remains opaque. These barriers stifled user participation, fostered hesitation, and undermined efficient resource sharing in communities.
+                        Using insights from our user research, our team identified critical pain points hindering peer-to-peer marketplaces: trust and safety gaps like scams, fake reviews, and payment insecurity; rental liability fears around damage, loss, or unclear responsibility; cumbersome onboarding processes and core user flows that demand too much effort; poor inter-user communication leading to misunderstandings; inaccurate product listings misrepresenting quality or condition; ineffective search tools and availability tracking; and pricing frustrations where fair market value remains opaque. These barriers stifled user participation, fostered hesitation, and undermined efficient resource sharing in communities.
                       </p>
                     </div>
                     <div className={styles['research-block']}>
@@ -115,9 +140,23 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
 
                   <div className={styles['research-image-two-col']}>
                     <div className={styles['research-image-half']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-research1.png"
+                        alt="LendItOut research snapshot"
+                        className={styles['zoomable-image']}
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-research1.png', 'LendItOut research snapshot')}
+                      />
                       <span className={styles['research-image-caption']}>Research snapshot</span>
                     </div>
                     <div className={styles['research-image-half']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-research2.png"
+                        alt="LendItOut research snapshot"
+                        className={styles['zoomable-image']}
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-research2.png', 'LendItOut research snapshot')}
+                      />
                       <span className={styles['research-image-caption']}>Research snapshot</span>
                     </div>
                   </div>
@@ -125,7 +164,14 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                   <div className={styles['research-text-split']}>
                     <div className={styles['research-text-image']}>
                       <div className={styles['research-image']}>
-                        <span className={styles['research-image-caption']}>Concept visual</span>
+                        <img
+                          src="/images/caseStudyImages/lenditout-research3.png"
+                          alt="LendItOut research snapshot"
+                          className={styles['zoomable-image']}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-research3.png', 'LendItOut research snapshot')}
+                        />
+                        <span className={styles['research-image-caption']}>Research snapshot</span>
                       </div>
                     </div>
                     <div className={styles['research-text-half']}>
@@ -179,15 +225,47 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                       </p>
                     </div>
                     <div className={styles['design-top-media']}>
-                      <div className={styles['design-vertical-tile']} />
-                      <div className={styles['design-vertical-tile']} />
+                      <div className={styles['design-vertical-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design1.png"
+                          alt="LendItOut design screen"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design1.png', 'LendItOut design screen')}
+                        />
+                        <span className={styles['research-image-caption']}>Design screen</span>
+                      </div>
+                      <div className={styles['design-vertical-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design2.png"
+                          alt="LendItOut design screen"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design2.png', 'LendItOut design screen')}
+                        />
+                        <span className={styles['research-image-caption']}>Design screen</span>
+                      </div>
                     </div>
                   </div>
 
                   <div className={styles['design-bottom']}>
                     <div className={styles['design-bottom-media']}>
-                      <div className={styles['design-bottom-tile']} />
-                      <div className={styles['design-bottom-tile']} />
+                      <div className={styles['design-bottom-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design3.png"
+                          alt="LendItOut design detail"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design3.png', 'LendItOut design detail')}
+                        />
+                        <span className={styles['research-image-caption']}>Design detail</span>
+                      </div>
+                      <div className={styles['design-bottom-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design4.png"
+                          alt="LendItOut design detail"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design4.png', 'LendItOut design detail')}
+                        />
+                        <span className={styles['research-image-caption']}>Design detail</span>
+                      </div>
                     </div>
                     <div className={styles['design-bottom-text']}>
                       <h4>Homepage Design Rationale</h4>
@@ -217,15 +295,47 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                       </p>
                     </div>
                     <div className={styles['design-top-media']}>
-                      <div className={styles['design-vertical-tile']} />
-                      <div className={styles['design-vertical-tile']} />
+                      <div className={styles['design-vertical-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design5.png"
+                          alt="LendItOut discover screen"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design5.png', 'LendItOut discover screen')}
+                        />
+                        <span className={styles['research-image-caption']}>Discover screen</span>
+                      </div>
+                      <div className={styles['design-vertical-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design6.png"
+                          alt="LendItOut discover screen"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design6.png', 'LendItOut discover screen')}
+                        />
+                        <span className={styles['research-image-caption']}>Discover screen</span>
+                      </div>
                     </div>
                   </div>
 
                 <div className={styles['design-bottom']}>
                     <div className={styles['design-bottom-media']}>
-                      <div className={styles['design-bottom-tile']} />
-                      <div className={styles['design-bottom-tile']} />
+                      <div className={styles['design-bottom-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design7.png"
+                          alt="LendItOut categories screen"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design7.png', 'LendItOut categories screen')}
+                        />
+                        <span className={styles['research-image-caption']}>Categories screen</span>
+                      </div>
+                      <div className={styles['design-bottom-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design8.png"
+                          alt="LendItOut categories screen"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design8.png', 'LendItOut categories screen')}
+                        />
+                        <span className={styles['research-image-caption']}>Categories screen</span>
+                      </div>
                     </div>
                     <div className={styles['design-bottom-text']}>
                       <h4>Comprehensive Categories Framework</h4>
@@ -252,15 +362,47 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                       </p>
                     </div>
                     <div className={styles['design-top-media']}>
-                      <div className={styles['design-vertical-tile']} />
-                      <div className={styles['design-vertical-tile']} />
+                      <div className={styles['design-vertical-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design9.png"
+                          alt="LendItOut listing flow"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design9.png', 'LendItOut listing flow')}
+                        />
+                        <span className={styles['research-image-caption']}>Listing flow</span>
+                      </div>
+                      <div className={styles['design-vertical-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design10.png"
+                          alt="LendItOut listing flow"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design10.png', 'LendItOut listing flow')}
+                        />
+                        <span className={styles['research-image-caption']}>Listing flow</span>
+                      </div>
                     </div>
                   </div>
 
                   <div className={styles['design-bottom']}>
                     <div className={styles['design-bottom-media']}>
-                      <div className={styles['design-bottom-tile']} />
-                      <div className={styles['design-bottom-tile']} />
+                      <div className={styles['design-bottom-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-desing11.png"
+                          alt="LendItOut safety detail"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-desing11.png', 'LendItOut safety detail')}
+                        />
+                        <span className={styles['research-image-caption']}>Safety detail</span>
+                      </div>
+                      <div className={styles['design-bottom-tile']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-design12.png"
+                          alt="LendItOut safety detail"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-design12.png', 'LendItOut safety detail')}
+                        />
+                        <span className={styles['research-image-caption']}>Safety detail</span>
+                      </div>
                     </div>
                     <div className={styles['design-bottom-text']}>
                       <h4>Integrated Safety Measures</h4>
@@ -285,8 +427,24 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                 <div className={styles['testing-content']}>
                   <div className={styles['testing-top']}>
                     <div className={styles['testing-media-grid']}>
-                      <div className={styles['testing-image']} />
-                      <div className={styles['testing-image']} />
+                      <div className={styles['testing-image']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-testing1.png"
+                          alt="LendItOut testing session"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-testing1.png', 'LendItOut testing session')}
+                        />
+                        <span className={styles['research-image-caption']}>Usability testing snapshot</span>
+                      </div>
+                      <div className={styles['testing-image']}>
+                        <img
+                          src="/images/caseStudyImages/lenditout-testing2.png"
+                          alt="LendItOut testing session"
+                          className={styles['zoomable-image']}
+                          onClick={() => openImage('/images/caseStudyImages/lenditout-testing2.png', 'LendItOut testing session')}
+                        />
+                        <span className={styles['research-image-caption']}>Usability testing snapshot</span>
+                      </div>
                     </div>
                     <div className={styles['testing-text-block']}>
                       <h4>Usability Testing Kickoff</h4>
@@ -341,14 +499,54 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                   </div>
 
                   <div className={styles['result-grid']}>
-                    <div className={styles['result-tile']} />
-                    <div className={styles['result-tile']} />
-                    <div className={styles['result-tile']} />
-                    <div className={styles['result-tile']} />
-                    <div className={styles['result-tile']} />
-                    <div className={styles['result-tile']} />
-                    <div className={styles['result-tile']} />
-                    <div className={styles['result-tile']} />
+                    <div className={styles['result-tile']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-result1.png"
+                        alt="LendItOut result screen"
+                        className={styles['zoomable-image']}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-result1.png', 'LendItOut result screen')}
+                      />
+                    </div>
+                    <div className={styles['result-tile']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-result2.png"
+                        alt="LendItOut result screen"
+                        className={styles['zoomable-image']}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-result2.png', 'LendItOut result screen')}
+                      />
+                    </div>
+                    <div className={styles['result-tile']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-result3.png"
+                        alt="LendItOut result screen"
+                        className={styles['zoomable-image']}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-result3.png', 'LendItOut result screen')}
+                      />
+                    </div>
+                    <div className={styles['result-tile']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-result4.png"
+                        alt="LendItOut result screen"
+                        className={styles['zoomable-image']}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-result4.png', 'LendItOut result screen')}
+                      />
+                    </div>
+                    <div className={styles['result-tile']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-result5.png"
+                        alt="LendItOut result screen"
+                        className={styles['zoomable-image']}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-result5.png', 'LendItOut result screen')}
+                      />
+                    </div>
+                    <div className={styles['result-tile']}>
+                      <img
+                        src="/images/caseStudyImages/lenditout-result6.png"
+                        alt="LendItOut result screen"
+                        className={styles['zoomable-image']}
+                        onClick={() => openImage('/images/caseStudyImages/lenditout-result6.png', 'LendItOut result screen')}
+                      />
+                    </div>
                   </div>
 
                    <div className={styles['result-outro']}>
@@ -369,6 +567,31 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
               <p>Let's make something amazing and usable that people actually love to use, because great design should feel effortless and meaningful in everyday life.</p>
               <button className={styles['cta-button']}>Send an email</button>
             </div>
-    </main>
+      </main>
+
+      {expandedImage && (
+        <div
+          className={styles['image-modal']}
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setExpandedImage(null)}
+        >
+          <button
+            type="button"
+            className={styles['image-modal-close']}
+            onClick={() => setExpandedImage(null)}
+            aria-label="Close image preview"
+          >
+            ×
+          </button>
+          <img
+            src={expandedImage.src}
+            alt={expandedImage.alt}
+            className={styles['image-modal-image']}
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      )}
+    </>
   )
 }
