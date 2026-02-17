@@ -411,8 +411,84 @@ export default function GotItCaseStudy() {
 
                 {activeTab === 'result' && (
                   <div className={styles['tab-pane']}>
-                    <h3>Result</h3>
-                    <p>Add your result content here</p>
+                    <div className={styles['result-content']}>
+                      <div className={styles['result-intro']}>
+                        <h4>Creating a Platform That Simplifies Technical Learning</h4>
+                        <p>We developed a webapp that help neurodiverse electrical apprentices turn dense study materials into accessible, easier-to-understand learning content. It lets students upload their own documents or open built‑in textbooks, then uses AI tools to simplify text, generate summaries, and create mind maps so they can quickly see the “big picture” and key points. </p>
+                      </div>
+                      <div className={styles['result-grid']}>
+                        <div className={`${styles['result-tile']} ${styles['result-tile-full']}`} aria-hidden="true">
+                          <img
+                            src="/images/caseStudyImages/got-it-result-full1.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-result-full1.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Homepage of Got It WebApp
+                          </span>
+                        </div>
+                        <div className={`${styles['result-tile']} ${styles['result-tile-half']}`} aria-hidden="true">
+                           <img
+                            src="/images/caseStudyImages/got-it-result-half1.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-result-half1.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Got It WebApp Dashboard
+                          </span>
+                        </div>
+                        <div className={`${styles['result-tile']} ${styles['result-tile-half']}`} aria-hidden="true">
+                           <img
+                            src="/images/caseStudyImages/got-it-result-half2.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-result-half2.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Creating a Study Guide in Got It WebApp
+                          </span>
+                        </div>
+                        <div className={`${styles['result-tile']} ${styles['result-tile-half']}`} aria-hidden="true">
+                           <img
+                            src="/images/caseStudyImages/got-it-result-half6.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-result-half6.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Applying AI Tools in Got It WebApp from Upload
+                          </span>
+                        </div>
+                        <div className={`${styles['result-tile']} ${styles['result-tile-half']}`} aria-hidden="true">
+                           <img
+                            src="/images/caseStudyImages/got-it-result-half4.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-result-half4.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Vocabulary Tab for Quick Definitions in Got It WebApp
+                          </span>
+                        </div>
+                        <div className={`${styles['result-tile']} ${styles['result-tile-full']}`} aria-hidden="true">
+                           <img
+                            src="/images/caseStudyImages/got-it-result-full2.png"
+                            alt="Got It design insight"
+                            className={styles['zoomable-image']}
+                            onClick={() => openImage('/images/caseStudyImages/got-it-result-full2.png', 'Got It design insight')}
+                          />
+                          <span className={styles['research-image-caption']}>
+                            Inside the Document with Applied AI Tools in Got It WebApp
+                          </span>
+                        </div>
+                      </div>
+                      <div className={styles['result-outro']}>
+                        <h4>My Final Thoughts</h4>
+                        <p>This project challenge me to step beyound my comfort zone, conducting in-depth UX/UI research with neurodiverse BCIT Electrical apprentices. It sharpened my critical thinking to identify and address every design gap in the Got It app. The successful, usability-validated outcomes fuels my passion to pursue a career as a UX/UI Designer.</p>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

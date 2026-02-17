@@ -578,7 +578,8 @@ a.secondary {
 .research-image:hover .research-image-caption,
 .research-image-half:hover .research-image-caption,
 .design-tile:hover .research-image-caption,
-.testing-image:hover .research-image-caption {
+.testing-image:hover .research-image-caption,
+.result-tile:hover .research-image-caption {
   opacity: 1;
   transform: translateY(0);
 }
@@ -611,7 +612,8 @@ a.secondary {
 .research-image::after,
 .research-image-half::after,
 .design-tile::after,
-.testing-image::after {
+.testing-image::after,
+.result-tile::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -856,6 +858,60 @@ a.secondary {
   align-items: start;
 }
 
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.result-intro h4, .result-outro h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 0.75rem 0;
+}
+
+.result-intro p, .result-outro p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 110px;
+  grid-auto-flow: row dense;
+  gap: 1.5rem;
+}
+
+.result-tile {
+  width: 100%;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-tile-full {
+  grid-column: span 4;
+  grid-row: span 5;
+}
+
+.result-tile-half {
+  grid-column: span 1;
+  grid-row: span 4;
+}
+
+.result-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 @media (max-width: 900px) {
   .design-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -876,6 +932,15 @@ a.secondary {
 
   .testing-image {
     min-height: 220px;
+  }
+
+  .result-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100px;
+  }
+
+  .result-tile-full {
+    grid-column: span 2;
   }
 }
 
