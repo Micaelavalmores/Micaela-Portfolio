@@ -90,18 +90,18 @@ export default function HomePage() {
             </div>
             <div className={styles['about-text']}>
               <h2>BACKGROUND</h2>
-              <p>Office ipsum you must be muted. Like sexy done give banner i'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
+              <p>As a Digital Design & Development student at British Columbia Institute of Technology (BCIT) in Vancouver, I specialize in UX/UI design and information architecture, with a philosophy centered on cognitive clarity—transforming complex information into intuitive, accessible experiences.</p>
+              <p>I’m driven to bridge technical education with inclusive digital tools that truly serve diverse learners, addressing a common frustration: apps that promise efficiency and intuitiveness but disappoint due to inadequate research into varied user needs. Rather than blaming users, I advocate for user-first design grounded in intensive research, creating products that accommodate neurodiverse and non-tech-savvy audiences without compromising aesthetics or functionality. My foundation in personal design hobbies—drawing, writing, and visual storytelling—complements hands-on experience with Figma prototyping, React development, and user testing, enabling me to craft interfaces that are both visually compelling and effortlessly intuitive.</p>
               <blockquote className={styles['about-quote']}>
                 "Good design is a lot like clear thinking made visual."
                 <footer>—Edward Tufte</footer>
               </blockquote>
-              <p>Office ipsum you must be muted. Like sexy done give banner i'm right. Goalposts goalposts individual weeks synchronise we native any. First-order email what viral eow light we scraps with.</p>
             </div>
           </div>
           <div className={styles['about-skills']}>
             <h2>STUFF I'M GOOD AT</h2>
             <div className={styles['skills-grid']}>
-              {['Designing', 'Designing', 'Designing', 'Designing', 'Designing', 'Designing'].map((skill, index) => (
+              {['Research & Strategy', 'Design & Prototyping', 'Visual & Interaction', 'Collaboration & Soft Skills', 'Graphic Designing'].map((skill, index) => (
                 <div key={index} className={styles['skill-item']}>
                   <div className={styles['skill-circle']}></div>
                   <p>{skill}</p>
@@ -113,15 +113,15 @@ export default function HomePage() {
         <div className={styles['Plat-sec']}>
           <h1>TOOLS I CAN USE</h1>
           <div className={styles['Plat-logos']}>
-            <img src="/icons/github.svg" alt="GitHub Logo" width={110} height={110} />
-            <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={110} height={110} />
-            <img src="/icons/after-effects.svg" alt="Adobe After Effects Logo" width={110} height={110} />
-            <img src="/icons/adobe-photoshop.svg" alt="Adobe Photoshop Logo" width={110} height={110} />
-            <img src="/icons/figma.svg" alt="Figma Logo" width={110} height={110} />
-            <img src="/icons/adobe-indesign.svg" alt="Adobe InDesign Logo" width={110} height={110} />
-            <img src="/icons/reactjs.svg" alt="React Logo" width={110} height={110} />
-            <img src="/icons/vercel.svg" alt="Vercel Logo" width={110} height={110} />
-            <img src="/icons/vscode.svg" alt="VS Code Logo" width={110} height={110} />
+            <img src="/icons/github.svg" alt="GitHub Logo" width={100} height={100} />
+            <img src="/icons/adobe-illustrator.svg" alt="Adobe Illustrator Logo" width={100} height={100} />
+            <img src="/icons/after-effects.svg" alt="Adobe After Effects Logo" width={100} height={100} />
+            <img src="/icons/adobe-photoshop.svg" alt="Adobe Photoshop Logo" width={100} height={100} />
+            <img src="/icons/figma.svg" alt="Figma Logo" width={100} height={100} />
+            <img src="/icons/adobe-indesign.svg" alt="Adobe InDesign Logo" width={100} height={100} />
+            <img src="/icons/reactjs.svg" alt="React Logo" width={100} height={100} />
+            <img src="/icons/vercel.svg" alt="Vercel Logo" width={100} height={100} />
+            <img src="/icons/vscode.svg" alt="VS Code Logo" width={100} height={100} />
           </div>
         </div>
         <div className={styles['contact-sec']}>

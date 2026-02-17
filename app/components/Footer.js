@@ -36,7 +36,7 @@ export default function Footer() {
             <h2>Contact Me</h2>
             <a
               href="mailto:micaela.valmores@gmail.com"
-              style={{ color: 'inherit', textDecoration: 'none' }}
+              style={{ color: 'inherit', textDecoration: 'none', fontSize: '2rem', fontWeight: '600' }}
             >
               micaela.valmores@gmail.com
             </a>

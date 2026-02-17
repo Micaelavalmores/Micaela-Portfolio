@@ -110,6 +110,15 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 9rem;
+}
+
+.location-info p{
+  font-size: 1.1rem;
+}
+
+.location-info span{
+  font-size: 1.5rem;
 }
 
 .location-pin {
@@ -119,8 +128,8 @@
 }
 
 .pin-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
   color: #A2020C;
 }
 

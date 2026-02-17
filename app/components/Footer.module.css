@@ -78,6 +78,11 @@
   text-align: right;
 }
 
+.resumeDownload a {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 
 
 /* \\\\\\\\\\\\\\\\\\ */
