@@ -416,7 +416,7 @@ export default function GotItCaseStudy() {
                         <h4>Creating a Platform That Simplifies Technical Learning</h4>
                         <p>We developed a webapp that help neurodiverse electrical apprentices turn dense study materials into accessible, easier-to-understand learning content. It lets students upload their own documents or open built‑in textbooks, then uses AI tools to simplify text, generate summaries, and create mind maps so they can quickly see the “big picture” and key points. </p>
                       </div>
-                      <div className={styles['result-grid']}>
+                      <div className={`${styles['result-grid']} ${styles['got-it-result-grid']}`}>
                         <div className={`${styles['result-tile']} ${styles['result-tile-full']}`} aria-hidden="true">
                           <img
                             src="/images/caseStudyImages/got-it-result-full1.png"
