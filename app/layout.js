@@ -2,7 +2,7 @@
 import { Geist } from "next/font/google";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
+import FooterVisibility from "./components/FooterVisibility";
 
 
 const geistSans = Geist({
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${raleway.variable}`}>
         {children}
-        <Footer />
+        <FooterVisibility />
       </body>
     </html>
   );

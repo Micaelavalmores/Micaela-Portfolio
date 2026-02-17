@@ -45,10 +45,10 @@ export default function HomePage() {
                   },
                   {
                     image: "/projects/Project-2.png",
-                    title: "Building a Safer Peer-to-Peer Rental Experience",
+                    title: "LendItOut: Building a Safer Peer-to-Peer Rental Experience",
                     description: "LendItOut is an all-in-one marketplace that allows users to rent, buy, and sell items in one seamless platform. Unlike traditional marketplaces, which focus solely on buying and selling, LendItOut is built around flexibility; letting people temporarily borrow what they need and purchase it later if desired.",
                     tags: ["UX/UI Design", "UX Research", "Product Design", "Interaction Design", "Trust and Safety Design", "Online Marketplace Design"],
-                    href: "/"
+                    href: "/case-study/lenditout"
                   }
                   // {
                   //   image: "/projects/Project-3.png",
