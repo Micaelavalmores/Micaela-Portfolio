@@ -9,6 +9,5 @@ Resources I would need:
 - Framer Motion
 - react Modal
 - Shadcn UI
--
-- <img width="1728" height="2976" alt="PUNCHUP Lofi Mockup" src="https://github.com/user-attachments/assets/8660bd46-9f68-48ef-a064-67db94f83f75" />
 
+- <img width="1728" height="2976" alt="PUNCHUP Lofi Mockup" src="https://github.com/user-attachments/assets/8660bd46-9f68-48ef-a064-67db94f83f75" />
