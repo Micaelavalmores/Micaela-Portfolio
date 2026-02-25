@@ -1,12 +1,15 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from '../../page.module.css'
 import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 export default function LendItOutCaseStudy() {
   const [activeTab, setActiveTab] = useState('research')
   const [expandedImage, setExpandedImage] = useState(null)
+  const tabContentRef = useRef(null)
+  const tabHeadingRef = useRef(null)
   const tabs = [
     { id: 'research', label: 'Research' },
     { id: 'design', label: 'Design' },
@@ -27,9 +30,38 @@ export default function LendItOutCaseStudy() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [expandedImage])
 
+  useEffect(() => {
+    const sections = document.querySelectorAll(`.${styles['scroll-section']}`)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles['scroll-section-visible'])
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.15 }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+
   const openImage = (src, alt) => {
     setExpandedImage({ src, alt })
   }
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId)
+    requestAnimationFrame(() => {
+      tabHeadingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+  }
+
+  const activeTabIndex = tabs.findIndex((tab) => tab.id === activeTab)
 
   return (
     <>
@@ -37,7 +69,7 @@ export default function LendItOutCaseStudy() {
         <div className={styles['case-study-body']}>
           <Navbar />
 
-          <div className={styles['case-study-hero-image']}>
+          <div className={`${styles['case-study-hero-image']} ${styles['scroll-section']}`}>
             <img
               src="/images/caseStudyImages/lenditoutcover.png"
               alt="LendItOut project hero"
@@ -52,7 +84,7 @@ export default function LendItOutCaseStudy() {
             </span>
           </div>
 
-        <div className={styles['case-study-overview']}>
+        <div className={`${styles['case-study-overview']} ${styles['scroll-section']}`}>
           <div className={styles['case-study-title-section']}>
             <h1>LendItOut: Building a Safer Peer-to-Peer Rental Experience</h1>
           </div>
@@ -100,22 +132,22 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
           </div>
         </div>
 
-        <div className={styles['case-study-section']}>
-          <h2>Case Study</h2>
+        <div className={`${styles['case-study-section']} ${styles['scroll-section']}`}>
+          <h2 ref={tabHeadingRef}>This was the process</h2>
 
           <div className={styles['case-study-tabs']}>
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 className={`${styles['case-study-tab']} ${activeTab === tab.id ? styles['active'] : ''}`}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => handleTabChange(tab.id)}
               >
                 {tab.label}
               </button>
             ))}
           </div>
 
-          <div className={styles['case-study-tab-content']}>
+          <div className={styles['case-study-tab-content']} ref={tabContentRef}>
             {activeTab === 'research' && (
               <div className={styles['tab-pane']}>
                 <div className={styles['research-content']}>
@@ -562,11 +594,33 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
         </div>
       </div>
 
-      <div className={styles['case-study-cta-section']}>
+      <div className={`${styles['case-study-cta-section']} ${styles['scroll-section']}`}>
               <h2>Like what you see?</h2>
               <p>Let's make something amazing and usable that people actually love to use, because great design should feel effortless and meaningful in everyday life.</p>
               <button className={styles['cta-button']}>Send an email</button>
             </div>
+      <div className={`${styles['case-study-nav']} ${styles['scroll-section']}`}>
+        {activeTabIndex > 0 && (
+          <button
+            type="button"
+            className={`${styles['case-study-nav-button']} ${styles['case-study-nav-secondary']}`}
+            onClick={() => handleTabChange(tabs[activeTabIndex - 1].id)}
+            aria-label="Go to previous tab"
+          >
+            Back
+          </button>
+        )}
+        {activeTabIndex < tabs.length - 1 && (
+          <button
+            type="button"
+            className={`${styles['case-study-nav-button']} ${styles['case-study-nav-primary']}`}
+            onClick={() => handleTabChange(tabs[activeTabIndex + 1].id)}
+            aria-label="Go to next tab"
+          >
+            Next
+          </button>
+        )}
+      </div>
       </main>
 
       {expandedImage && (
@@ -592,6 +646,7 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
           />
         </div>
       )}
+      <Footer />
     </>
   )
 }
