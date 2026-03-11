@@ -725,12 +725,283 @@ a.secondary {
   /* margin-top: 2rem; */
 }
 
+.got-it-concept {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.got-it-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #c7c7c7;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #fff;
+  table-layout: fixed;
+}
+
+.got-it-table td {
+  padding: 1rem 1.1rem 4rem;;
+}
+
+.got-it-table th {
+  padding: 1rem 1.1rem;
+}
+
+.got-it-table th,
+.got-it-table td {
+  border-right: 2px solid #c7c7c7;
+  border-bottom: 2px solid #c7c7c7;
+  text-align: left;
+  vertical-align: top;
+}
+
+
+.got-it-table th:last-child,
+.got-it-table td:last-child {
+  border-right: none;
+}
+
+.got-it-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.got-it-table th {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.35;
+}
+
+.got-it-table td {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.got-it-table th:first-child,
+.got-it-table td:first-child {
+  width: 25%;
+}
+
+.got-it-matrix-row {
+  align-items: stretch;
+  gap: 0.8rem;
+}
+
+.got-it-matrix-block {
+  gap: 0.7rem;
+  height: 100%;
+}
+
+
+.got-it-table-gaps th:first-child,
+.got-it-table-gaps td:first-child {
+  width: 32%;
+}
+
+.got-it-table-solutions th:first-child,
+.got-it-table-solutions td:first-child {
+  width: 30%;
+}
+
+.got-it-table-solutions th:nth-child(2),
+.got-it-table-solutions td:nth-child(2) {
+  width: 40%;
+}
+
+.got-it-table-gaps,
+.got-it-table-solutions {
+  height: 100%;
+}
+
+.got-it-matrix-block > .got-it-table {
+  flex: 1;
+}
+
+.got-it-matrix-block > h4 {
+  min-height: 2.9rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.got-it-dot-list {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+.got-it-dot-list li::before {
+  content: none;
+}
+
+.got-it-table-three-col th:first-child,
+.got-it-table-three-col td:first-child {
+  width: 28%;
+}
+
+.got-it-table-three-col th:nth-child(2),
+.got-it-table-three-col td:nth-child(2) {
+  width: 28%;
+}
+
+.got-it-table-digital th:first-child,
+.got-it-table-digital td:first-child {
+  width: 18%;
+}
+
+.got-it-table-digital th:nth-child(2),
+.got-it-table-digital td:nth-child(2) {
+  width: 39%;
+}
+
+.got-it-table-expanded th:first-child,
+.got-it-table-expanded td:first-child {
+  width: 11%;
+}
+
+.got-it-table-expanded th:nth-child(2),
+.got-it-table-expanded td:nth-child(2) {
+  width: 21%;
+}
+
+.got-it-table-expanded th:nth-child(3),
+.got-it-table-expanded td:nth-child(3) {
+  width: 30%;
+}
+
+.got-it-table-expanded th:nth-child(4),
+.got-it-table-expanded td:nth-child(4) {
+  width: 24%;
+}
+
+.got-it-table-expanded th:nth-child(5),
+.got-it-table-expanded td:nth-child(5) {
+  width: 14%;
+}
+
+.got-it-table-study th:first-child,
+.got-it-table-study td:first-child {
+  width: 61%;
+}
+
+.got-it-study-row {
+  align-items: stretch;
+  gap: 1.2rem;
+  grid-template-columns: 1.45fr 0.95fr;
+  margin-top: 1.1rem;
+}
+
+.got-it-study-block {
+  gap: 0.7rem;
+  margin-top: 4rem;
+}
+
+.got-it-study-block h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+}
+
+.got-it-table-study-expanded th:first-child,
+.got-it-table-study-expanded td:first-child {
+  width: 34%;
+}
+
+.got-it-table-study-expanded th:nth-child(2),
+.got-it-table-study-expanded td:nth-child(2) {
+  width: 34%;
+}
+
+.got-it-table-study-expanded th:nth-child(3),
+.got-it-table-study-expanded td:nth-child(3) {
+  width: 32%;
+}
+
+.got-it-table-quotes-survey th:first-child,
+.got-it-table-quotes-survey td:first-child {
+  width: 35%;
+}
+
+.got-it-table-study-expanded,
+.got-it-table-quotes-survey {
+  height: 680px;
+}
+
+.got-it-table-study-expanded thead tr,
+.got-it-table-quotes-survey thead tr {
+  height: 74px;
+}
+
+.got-it-table-study-expanded tbody tr {
+  height: 606px;
+}
+
+.got-it-table-quotes-survey tbody tr {
+  height: 202px;
+}
+
+.got-it-table-study-expanded td p {
+  margin: 0 0 0.8rem 0;
+}
+
+.got-it-table-quotes th:first-child,
+.got-it-table-quotes td:first-child {
+  width: 19%;
+}
+
+.got-it-subheading {
+  margin-top: 0.75rem !important;
+}
+
+.got-it-column-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.research-block h4 + .got-it-table {
+  margin-top: 0.15rem;
+}
+
+.got-it-table + h4 {
+  margin-top: 1rem !important;
+}
+
+.got-it-table + .got-it-table {
+  margin-top: 0.35rem;
+}
+
+.got-it-feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.got-it-feature-list li {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.got-it-feature-list li + li {
+  margin-top: 0.1rem;
+}
+
+.got-it-feature-list li::before {
+  content: "- ";
+}
+
 .research-text-split {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 2rem;
   align-items: stretch;
+  padding: 50px 0;
 }
 
 .research-text-image {
@@ -746,6 +1017,23 @@ a.secondary {
   margin-top: 0;
   height: 100%;
   align-items: stretch;
+}
+
+.got-it-concept-image-panel {
+  display: block;
+  position: relative;
+  min-height: 780px;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #d9d9d9;
+}
+
+.got-it-concept-image-panel > img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
 }
 
 .research-text-image .research-image {
@@ -823,6 +1111,28 @@ a.secondary {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
+
+  .got-it-study-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .got-it-table-study-expanded,
+  .got-it-table-quotes-survey {
+    height: auto;
+  }
+
+  .got-it-table-study-expanded thead tr,
+  .got-it-table-quotes-survey thead tr,
+  .got-it-table-study-expanded tbody tr,
+  .got-it-table-quotes-survey tbody tr {
+    height: auto;
+  }
+
+  .got-it-study-block h4 {
+    font-size: 1.45rem;
+  }
 
 .design-vertical-tile {
   width: 100%;
@@ -1196,6 +1506,43 @@ a.secondary {
     grid-column: span 1;
     grid-row: span 3;
   }
+
+  .got-it-table th,
+  .got-it-table td {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .got-it-table td {
+    font-size: 0.92rem;
+  }
+
+  .got-it-table th {
+    font-size: 1rem;
+  }
+
+  .got-it-concept-image-panel {
+    min-height: 460px;
+  }
+
+  .got-it-matrix-row {
+    gap: 1rem;
+  }
+
+  .got-it-table-gaps,
+  .got-it-table-solutions {
+    height: auto;
+  }
+
+  .got-it-table-gaps thead tr,
+  .got-it-table-solutions thead tr,
+  .got-it-table-gaps tbody tr,
+  .got-it-table-solutions tbody tr {
+    height: auto;
+  }
+
+  .got-it-matrix-block h4 {
+    font-size: 1.45rem;
+  }
 }
 
 .case-study-cta-section {
@@ -1240,6 +1587,78 @@ a.secondary {
 .cta-button:hover {
   box-shadow: 0 10px 24px rgba(162, 2, 12, 0.2);
   transform: translateY(-2px);
+}
+
+.case-study-overview .case-study-title-section h1 {
+  font-size: 2.25rem;
+}
+
+.case-study-section h2 {
+  font-size: 3rem;
+}
+
+.case-study-overview h3,
+.case-study-section h3 {
+  font-size: 1.25rem;
+}
+
+.case-study-section h4,
+.research-block h4,
+.research-text-half h4,
+.research-content h4,
+.design-content .research-summary h4,
+.testing-text-block h4,
+.result-intro h4,
+.result-outro h4 {
+  font-size: 1.45rem;
+}
+
+.case-study-overview p,
+.case-study-overview li,
+.case-study-section p,
+.case-study-section li,
+.case-study-section td,
+.case-study-section th,
+.case-study-section .case-study-tab,
+.case-study-section .research-image-caption {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 900px) {
+  .case-study-overview .case-study-title-section h1 {
+    font-size: 2rem;
+  }
+
+  .case-study-section h2 {
+    font-size: 2.35rem;
+  }
+
+  .case-study-overview h3,
+  .case-study-section h3 {
+    font-size: 1.15rem;
+  }
+
+  .case-study-section h4,
+  .research-block h4,
+  .research-text-half h4,
+  .research-content h4,
+  .design-content .research-summary h4,
+  .testing-text-block h4,
+  .result-intro h4,
+  .result-outro h4 {
+    font-size: 1.3rem;
+  }
+
+  .case-study-overview p,
+  .case-study-overview li,
+  .case-study-section p,
+  .case-study-section li,
+  .case-study-section td,
+  .case-study-section th,
+  .case-study-section .case-study-tab,
+  .case-study-section .research-image-caption {
+    font-size: 1.05rem;
+  }
 }
 
 .case-study-nav {

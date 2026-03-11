@@ -177,86 +177,228 @@ export default function GotItCaseStudy() {
                       {/* Overall Summary */}
                       <div className={styles['research-summary']}>
                         <h4>Key Findings</h4>
-                        <p>In analyzing my research findings, I see a clear misalignment between how my participants learn best and how their program content is currently delivered. Neurodiverse electrical apprentices are moderately comfortable with digital tools, yet they are expected to navigate dense, textbook-heavy materials with small text, jargon, and minimal visuals, especially in math and the Canadian Electrical Code. This setup creates cognitive overload and leaves many of them feeling discouraged and behind. I noticed that students respond by building their own supports—highlighting, taking notes, repeating concepts, seeking hands-on practice, and relying on videos—which shows strong motivation and a clear preference for multimodal, guided learning. I also observed that institutional accessibility services are not widely known or consistently helpful, suggesting they are either not visible, not tailored, or not aligned with day-to-day study challenges. Based on this, I proposed a tool with strong visual supports, simplified language and glossary, flexible learning modes, accessibility controls, and features like search, annotation, and printable cheat sheets to better match how these learners actually study.</p>
+                        <p>My research exposed a gap between how neurodiverse electrical apprentices learn and how content is delivered. They struggle with dense, text-heavy materials and often make their own visual or hands-on supports, showing a need for guided, multimodal learning. I proposed a tool with visual aids, plain language, flexible modes, and accessibility features.</p>
                       </div>
 
                       {/* Two Column Section */}
-                      <div className={styles['research-two-col']}>
-                        <div className={styles['research-block']}>
-                          <h4>Digital Comfort and Textbook Barriers</h4>
-                          <p>In leading this research at BCIT, I found neurodiverse electrical students rely on personal laptops with moderate digital comfort, but textbook-heavy materials—especially dense math and Canadian Electrical Code with small fonts, jargon, and few visuals—leave those with learning disabilities discouraged and behind.</p>
-                          <div className={styles['research-image']}>
-                            <img
-                              src="/images/caseStudyImages/got-it-research-img1.png"
-                              alt="Got It research insight"
-                              className={styles['zoomable-image']}
-                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                              onClick={() => openImage('/images/caseStudyImages/got-it-research-img1.png', 'Got It research insight')}
-                            />
-                            <span className={styles['research-image-caption']}>
-                              Results from User Survey
-                            </span>
+                          <div className={styles['research-block']}>
+                            <h4>Digital Comfort and Textbook Barriers</h4>
+                            <table className={`${styles['got-it-table']} ${styles['got-it-table-expanded']}`}>
+                              <thead>
+                                <tr>
+                                  <th>Aspect</th>
+                                  <th>Detailed Findings</th>
+                                  <th>Evidence/Examples</th>
+                                  <th>Impact on Neurodiverse Learners</th>
+                                  <th>BCIT Context</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Digital Comfort</td>
+                                  <td>
+                                    <ul className={styles['got-it-feature-list']}>
+                                      <li>Heavy reliance on personal laptops (nearly100% usage)</li>
+                                      <li>Moderate overall comfort with digital tools</li>
+                                      <li>Familiarity with apps like YouTube for tutorials</li>
+                                    </ul>
+                                  </td>
+                                  <td>Survey: Laptops top device at 100%; phones/iPads secondary</td>
+                                  <td>Strong foundation for web-based solutions; reduces adoption barriers</td>
+                                  <td>BCIT Level 1 electrical apprentices comfortable with digital but need guided interfaces</td>
+                                </tr>
+                                <tr>
+                                  <td>Textbook Barriers</td>
+                                  <td>
+                                    <ul className={styles['got-it-feature-list']}>
+                                      <li>Dense math content with minimal breakdown</li>
+                                      <li>Canadian Electrical Code: jargon-heavy, small fonts</li>
+                                      <li>Few visuals/examples; large unbroken text blocks</li>
+                                      <li>Overly technical language/acronyms</li>
+                                    </ul>
+                                  </td>
+                                  <td>Participant quotes: "Dense text harder to absorb"; "No images = crazy not productive"</td>
+                                  <td>
+                                    <ul className={styles['got-it-feature-list']}>
+                                      <li>Cognitive overload</li>
+                                      <li>Discouragement/falling behind</li>
+                                      <li>Prefer self-made supports (notes, videos)</li>
+                                    </ul>
+                                  </td>
+                                  <td>Program materials (e.g., Delmar's chapters) prioritize text over multimodal aids, misaligning with neurodiverse needs</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
-                        </div>
-                        <div className={styles['research-block']}>
+                      <div className={`${styles['research-two-col']} ${styles['got-it-study-row']}`}>
+                        <div className={`${styles['research-block']} ${styles['got-it-study-block']}`}>
                           <h4>Study Organization Struggles and Coping Strategies</h4>
-                          <p>Participants struggle to start studying and organize complex material, coping by breaking down text, highlighting, note-taking, repeating concepts, and using hands-on practice, step-by-step visuals, diagrams, and YouTube tutorials.</p>
-                          <div className={styles['research-image']}>
-                            <img
-                                src="/images/caseStudyImages/got-it-research-img3.png"
-                                alt="Got It research insight"
-                                className={styles['zoomable-image']}
-                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img3.png', 'Got It research insight')}
-                              />
-                            <span className={styles['research-image-caption']}>
-                              Results from User Survey
-                            </span>
-                          </div>
+                          <table className={`${styles['got-it-table']} ${styles['got-it-table-study-expanded']}`}>
+                            <thead>
+                              <tr>
+                                <th>Struggles</th>
+                                <th>Coping Strategies</th>
+                                <th>Evidence &amp; Impact</th>
+                              </tr>
+                            </thead>
+                            
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <p><strong>Difficulty starting and organizing complex material</strong></p>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Overwhelmed by large chapters (Delmar's 4-chapter reading blocks)</li>
+                                    <li>Unclear prioritization for tests/labs</li>
+                                    <li>Lose track across scattered resources</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Breaking down text into chunks</li>
+                                    <li>Highlighting key terms/rules</li>
+                                    <li>Note-taking in own words</li>
+                                    <li>Repeating concepts until they stick</li>
+                                    <li>Hands-on lab practice</li>
+                                    <li>Step-by-step visuals/diagrams</li>
+                                    <li>YouTube tutorials for demonstrations</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li><strong>Participant quotes:</strong> "Every part only text without images... all boring + chapter most difficult"</li>
+                                    <li><strong>Why it works:</strong> Creates structure, reduces cognitive overload, builds confidence through visible progress</li>
+                                    <li><strong>Shows motivation:</strong> Students self-build multimodal supports despite program gaps</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div className={`${styles['research-block']} ${styles['got-it-study-block']}`}>
+                          <h4>Participant Quotes from Survey</h4>
+                          <table className={`${styles['got-it-table']} ${styles['got-it-table-quotes-survey']}`}>
+                            <thead>
+                              <tr>
+                                <th>Issue</th>
+                                <th>Quote Excerpt</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>No breaks/examples</td>
+                                <td>"In every part only have text without images is test reading 4 chapter Delmar's and 2 questions on 40-go show and when 0% on the test... all the boring + chapter is most difficult and 1-2"</td>
+                              </tr>
+                              <tr>
+                                <td>Dense presentation</td>
+                                <td>"The more dense the text it (and English) the harder it is to absorb. Bold font for important words, images of concepts, empty space on the page... that helps"</td>
+                              </tr>
+                              <tr>
+                                <td>Lack of visuals</td>
+                                <td>"Without visuals or example/sample questions... just crazy it not useful/productive"</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
 
                       
                       {/* Two Column Section */}
-                      <div className={styles['research-two-col']}>
-                        <div className={styles['research-block']}>
+                      <div className={`${styles['research-two-col']} ${styles['got-it-matrix-row']}`}>
+                        <div className={`${styles['research-block']} ${styles['got-it-matrix-block']}`}>
                           <h4>Accessibility Gaps and Specific Pain Points</h4>
-                          <p>I also discovered low awareness and mixed experiences with BCIT accessibility services, along with pain points like confusing acronyms, limited real-world examples, overly technical language, scarce practice exams, and scattered resources.</p>
-                          <div className={styles['research-image']}>
-                            <img
-                                src="/images/caseStudyImages/got-it-research-img4.png"
-                                alt="Got It research insight"
-                                className={styles['zoomable-image']}
-                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img4.png', 'Got It research insight')}
-                              />
-                            <span className={styles['research-image-caption']}>
-                              Results from User Survey
-                            </span>
-                          </div>
+                          <table className={`${styles['got-it-table']} ${styles['got-it-table-gaps']}`}>
+                            <thead>
+                              <tr>
+                                <th>Gap Category</th>
+                                <th>Specific Pain Points</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Institutional Services</td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Low awareness of BCIT accessibility services</li>
+                                    <li>Mixed experiences (not visible, tailored, or aligned with daily challenges)</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Content &amp; Language</td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Confusing acronyms</li>
+                                    <li>Overly technical language</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Learning Resources</td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Limited real-world examples</li>
+                                    <li>Scarce practice exams</li>
+                                    <li>Scattered resources</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
-                        <div className={styles['research-block']}>
+                        <div className={`${styles['research-block']} ${styles['got-it-matrix-block']}`}>
                           <h4>Recommended Tool Solutions</h4>
-                          <p>Based on these insights, I recommended a tool with strong visual supports, simplified language/glossary, diverse learning modes, accessibility settings, offline access, search, annotation, and printable cheat sheets.</p>
-                          <div className={styles['research-image']}>
-                            <img
-                                src="/images/caseStudyImages/got-it-research-img5.png"
-                                alt="Got It research insight"
-                                className={styles['zoomable-image']}
-                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img5.png', 'Got It research insight')}
-                              />
-                            <span className={styles['research-image-caption']}>
-                              Results from User Survey
-                            </span>
-                          </div>
+                          <table className={`${styles['got-it-table']} ${styles['got-it-table-solutions']}`}>
+                            <thead>
+                              <tr>
+                                <th>Solution Category</th>
+                                <th>Specific Features</th>
+                                <th>Purpose</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Visual &amp; Comprehension Aids</td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Strong visual supports</li>
+                                    <li>Simplified language</li>
+                                    <li>Glossary</li>
+                                  </ul>
+                                </td>
+                                <td>Reduce cognitive overload from technical jargon and dense text</td>
+                              </tr>
+                              <tr>
+                                <td>Learning Flexibility</td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Diverse learning modes</li>
+                                    <li>Accessibility settings</li>
+                                    <li>Offline access</li>
+                                  </ul>
+                                </td>
+                                <td>Support multimodal processing and varied study environments</td>
+                              </tr>
+                              <tr>
+                                <td>Navigation &amp; Organization</td>
+                                <td>
+                                  <ul className={`${styles['got-it-feature-list']} ${styles['got-it-dot-list']}`}>
+                                    <li>Search functionality</li>
+                                    <li>Annotation tools</li>
+                                    <li>Printable cheat sheets</li>
+                                  </ul>
+                                </td>
+                                <td>Enable quick access, personalization, and on-demand reference</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
 
                       <div className={styles['research-text-split']}>
                         <div className={styles['research-text-image']}>
-                          <div className={styles['research-image-two-col']}>
-                            <div className={styles['research-image-half']}>
+                          <div className={`${styles['research-image-two-col']} ${styles['got-it-concept-image-panel']}`}>
+
                               <img
                                 src="/images/caseStudyImages/got-it-research-img6.png"
                                 alt="Got It research insight"
@@ -267,36 +409,62 @@ export default function GotItCaseStudy() {
                               <span className={styles['research-image-caption']}>
                                 Results from User Survey
                               </span>
-                            </div>
-                            <div className={styles['research-image-half']}>
-                              <img
-                                src="/images/caseStudyImages/got-it-research-img7.png"
-                                alt="Got It research insight"
-                                className={styles['zoomable-image']}
-                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                                onClick={() => openImage('/images/caseStudyImages/got-it-research-img7.png', 'Got It research insight')}
-                              />
-                              <span className={styles['research-image-caption']}>
-                                Results from User Survey
-                              </span>
-                            </div>
+
+
                           </div>
                         </div>
                         <div className={styles['research-text-half']}>
-                          <h4>This was the approach we went with</h4>
-                          <p>The research led us to conceptualize a web application that consolidates students' fragmented study methods into a single, cohesive platform tailored to neurodiverse learners.</p>
-                          
-                          <p>The idea is to provide one environment that integrates required textbooks with accessibility-focused features, reducing the need to constantly switch between tools.</p>
+                          <div className={styles['got-it-concept']}>
+                            <h4>App Concept Overview</h4>
+                            <table className={styles['got-it-table']}>
+                              <thead>
+                                <tr>
+                                  <th>Purpose</th>
+                                  <th>Key Benefit</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Consolidate fragmented study methods into one platform for neurodiverse learners</td>
+                                  <td>Integrates textbooks with accessibility features; eliminates tool-switching</td>
+                                </tr>
+                              </tbody>
+                            </table>
 
-                          <p>The web app would include:</p>
-                          <ul className={styles['research-bullet-list']}>
-                            <li>Pomodoro-style study timer.</li>
-                            <li>AI-powered summarization.</li>
-                            <li>Simplification.</li>
-                            <li>Mind mapping.</li>
-                          </ul>
-
-                          <p>To support different ways of processing information. It would also offer core editing and navigation capabilities such as highlighting, bolding, line-spacing adjustments, and a split-screen view to compare original and transformed content. Together, these features are designed to keep everything visible, organized, and accessible without overwhelming the user.</p>
+                            <h4>Core Features</h4>
+                            <table className={styles['got-it-table']}>
+                              <thead>
+                                <tr>
+                                  <th>Category</th>
+                                  <th>Features</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Study Tools</td>
+                                  <td>
+                                    <ul className={styles['got-it-feature-list']}>
+                                      <li>Pomodoro-style timer</li>
+                                      <li>AI-powered summarization</li>
+                                      <li>Simplification</li>
+                                      <li>Mind mapping</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Editing &amp; Navigation</td>
+                                  <td>
+                                    <ul className={styles['got-it-feature-list']}>
+                                      <li>Highlighting</li>
+                                      <li>Bolding</li>
+                                      <li>Line-spacing adjustments</li>
+                                      <li>Split-screen view (original vs. transformed content)</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>
