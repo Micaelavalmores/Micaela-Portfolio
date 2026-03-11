@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link'
 import styles from '../page.module.css'
 import Navbar from '../components/Navbar'
 import Chip from '../components/Chip'
@@ -27,6 +26,7 @@ export default function HomePage() {
             <Chip label="Download Resume" variant="outlined" />
             </div>
         </div>
+        <div className={styles['content-sec']}>
         <div className={styles['Proj-sec']}>
           <h1>FEATURED PROJECTS</h1>
           <div className={styles['Proj-nav']}>
@@ -38,21 +38,17 @@ export default function HomePage() {
                 {[
                   {
                     image: "/projects/Project-1.png",
-                    title: "Project Title 1",
-                    description: "Brief description of the project goes here. It should be concise and informative.",
-                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                    title: "Got It",
+                    description: "Office ipsum you must be muted. Weaponize world future-proof alarming ideal highlights. Hours encourage mifflin live ballpark air key game search. View reach anomalies cadence gave get. Discussions seat another playing hands organic.",
+                    tags: ["TagHere", "TagHere", "TagHere", "TagHere", "TagHere", "TagHere"],
+                    href: "/case-study/got-it"
                   },
                   {
                     image: "/projects/Project-2.png",
-                    title: "Project Title 2",
-                    description: "Brief description of the project goes here. It should be concise and informative.",
-                    tags: ["UX/UI Design", "Prototyping", "Development"]
-                  },
-                  {
-                    image: "/projects/Project-3.png",
-                    title: "Project Title 3",
-                    description: "Brief description of the project goes here. It should be concise and informative.",
-                    tags: ["UX/UI Design", "Prototyping", "Development"]
+                    title: "LendItOut",
+                    description: "Office ipsum you must be muted. Weaponize world future-proof alarming ideal highlights. Hours encourage mifflin live ballpark air key game search. View reach anomalies cadence gave get. Discussions seat another playing hands organic.",
+                    tags: ["TagHere", "TagHere", "TagHere", "TagHere", "TagHere", "TagHere"],
+                    href: "/case-study/lenditout"
                   }
                 ].map((project, index) => (
                   <FtProj
@@ -61,6 +57,7 @@ export default function HomePage() {
                     title={project.title}
                     description={project.description}
                     tags={project.tags}
+                    href={project.href}
                   />
                 ))}
               </div>
@@ -119,6 +116,7 @@ export default function HomePage() {
             <img src="/icons/vercel.svg" alt="Vercel Logo" width={110} height={110} />
             <img src="/icons/vscode.svg" alt="VS Code Logo" width={110} height={110} />
           </div>
+        </div>
         </div>
         <div className={styles['contact-sec']}>
           <h1>READY TO CONNECT?</h1>

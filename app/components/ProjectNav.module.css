@@ -1,18 +1,20 @@
 .navContainer {
   display: flex;
-  gap: 0.50rem;
+  gap: 1rem;
+  width: 100%;
 }
 
 .navTab {
-  padding: 0.875rem 2rem;
+  padding: 1rem;
   border-radius: 9999px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1rem;
-  border: none;
+  border: 1.5px solid #A2020C;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
-  width: 15%;
+  width: 100%;
+  line-height: 1.1;
 }
 
 .active {
@@ -23,9 +25,18 @@
 .inactive {
   background-color: #ffffff;
   color: #A2020C;
-  border: 2px solid #A2020C;
 }
 
 .inactive:hover {
   background-color: #f5f5f5;
+}
+
+@media (max-width: 680px) {
+  .navContainer {
+    gap: 0.75rem;
+  }
+
+  .navTab {
+    padding: 0.85rem 1rem;
+  }
 }

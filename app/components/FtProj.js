@@ -1,14 +1,15 @@
 import Image from "next/image";
-import Chip from "./Chip";
+import Link from "next/link";
 import styles from "./FtProj.module.css";
 
 export default function FtProj({
   image = "/placeholder.png",
-  title = "TITLE OF THIS CASE",
-  description = "Office ipsum you must be muted. Wanted these client it's keep keywords marginalised whistles.",
-  tags = ["UX/UI Design", "Prototyping", "Development"],
+  title = "Title of the Project here",
+  description = "Office ipsum you must be muted. Weaponize world future-proof alarming ideal highlights.",
+  tags = ["TagHere", "TagHere", "TagHere", "TagHere", "TagHere", "TagHere"],
+  href,
 }) {
-  return (
+  const cardContent = (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
         <Image
@@ -24,12 +25,19 @@ export default function FtProj({
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
 
-        <div className={styles.tagsContainer}>
-          {tags.map((tag, index) => (
-            <Chip key={index} label={tag} variant="outlined" />
-          ))}
+        
         </div>
       </div>
-    </div>
+
   );
+
+  if (href) {
+    return (
+      <Link href={href} className={styles.cardLink} aria-label={`Open case study: ${title}`}>
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return cardContent;
 }
