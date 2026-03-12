@@ -154,7 +154,7 @@ export default function GotItCaseStudy() {
               </div>
             </div>
 
-            <div className={`${styles['case-study-section']} ${styles['scroll-section']}`}>
+            <div className={`${styles['case-study-section']}`}>
               <h2 ref={tabHeadingRef}>This was the process</h2>
               
               <div className={styles['case-study-tabs']}>
@@ -171,7 +171,7 @@ export default function GotItCaseStudy() {
 
               <div className={styles['case-study-tab-content']} ref={tabContentRef}>
                 {activeTab === 'research' && (
-                  <div className={styles['tab-pane']}>
+                  <div className={`${styles['tab-pane']} ${styles['no-tab-fade']}`}>
                     <div className={styles['research-content']}>
 
                       {/* Overall Summary */}
@@ -229,6 +229,7 @@ export default function GotItCaseStudy() {
                                 </tr>
                               </tbody>
                             </table>
+                            
                           </div>
                       <div className={`${styles['research-two-col']} ${styles['got-it-study-row']}`}>
                         <div className={`${styles['research-block']} ${styles['got-it-study-block']}`}>
@@ -472,7 +473,7 @@ export default function GotItCaseStudy() {
                 )}
 
                 {activeTab === 'design' && (
-                  <div className={styles['tab-pane']}>
+                  <div className={`${styles['tab-pane']} ${styles['no-tab-fade']}`}>
                     <div className={styles['design-content']}>
                       <div className={styles['design-intro-section']}>
                         <div className={styles['design-intro']}>
@@ -556,7 +557,7 @@ export default function GotItCaseStudy() {
                 )}
 
                 {activeTab === 'testing' && (
-                  <div className={styles['tab-pane']}>
+                  <div className={`${styles['tab-pane']} ${styles['no-tab-fade']}`}>
                     <div className={styles['testing-content']}>
                       <div className={styles['testing-top']}>
                         <div className={styles['testing-media-grid']}>
@@ -610,7 +611,7 @@ export default function GotItCaseStudy() {
                 )}
 
                 {activeTab === 'result' && (
-                  <div className={styles['tab-pane']}>
+                  <div className={`${styles['tab-pane']} ${styles['no-tab-fade']}`}>
                     <div className={styles['result-content']}>
                       <div className={styles['result-intro']}>
                         <h4>Creating a Platform That Simplifies Technical Learning</h4>
@@ -694,11 +695,6 @@ export default function GotItCaseStudy() {
               </div>
             </div>
 
-            <div className={`${styles['case-study-cta-section']} ${styles['scroll-section']}`}>
-              <h2>Like what you see?</h2>
-              <p>Let's make something amazing and usable that people actually love to use, because great design should feel effortless and meaningful in everyday life.</p>
-              <button className={styles['cta-button']}>Send an email</button>
-            </div>
             <div className={`${styles['case-study-nav']} ${styles['scroll-section']}`}>
               {activeTabIndex > 0 && (
                 <button
@@ -721,6 +717,13 @@ export default function GotItCaseStudy() {
                 </button>
               )}
             </div>
+
+            <div className={`${styles['case-study-cta-section']} ${styles['scroll-section']}`}>
+              <h2>Like what you see?</h2>
+              <p>Let's make something amazing and usable that people actually love to use, because great design should feel effortless and meaningful in everyday life.</p>
+              <button className={styles['cta-button']}>Send an email</button>
+            </div>
+            
         </div>
       </main>
 

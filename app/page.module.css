@@ -12,7 +12,7 @@
   min-height: 100vh;
   font-family: var(--font-geist-sans);
   background-color: var(--background);
-  margin: 1rem 10rem 0;
+  margin: 1rem 7rem 0;
 }
 
 .scroll-section {
@@ -547,6 +547,10 @@ a.secondary {
   animation: fadeIn 0.3s ease-in;
 }
 
+.no-tab-fade {
+  animation: none;
+}
+
 .research-content {
   display: flex;
   flex-direction: column;
@@ -860,27 +864,27 @@ a.secondary {
 
 .got-it-table-expanded th:first-child,
 .got-it-table-expanded td:first-child {
-  width: 11%;
+  width: 14%;
 }
 
 .got-it-table-expanded th:nth-child(2),
 .got-it-table-expanded td:nth-child(2) {
-  width: 21%;
+  width: 20%;
 }
 
 .got-it-table-expanded th:nth-child(3),
 .got-it-table-expanded td:nth-child(3) {
-  width: 30%;
+  width: 20%;
 }
 
 .got-it-table-expanded th:nth-child(4),
 .got-it-table-expanded td:nth-child(4) {
-  width: 24%;
+  width: 23%;
 }
 
 .got-it-table-expanded th:nth-child(5),
 .got-it-table-expanded td:nth-child(5) {
-  width: 14%;
+  width: 20%;
 }
 
 .got-it-table-study th:first-child,
@@ -897,13 +901,22 @@ a.secondary {
 
 .got-it-study-block {
   gap: 0.7rem;
-  margin-top: 4rem;
+  margin-top: 2.2rem;
 }
 
 .got-it-study-block h4 {
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 0.35rem 0;
+  margin: 0;
+}
+
+.got-it-study-intro {
+  margin: 0.35rem 0 1.4rem 0;
+  max-width: 1350px;
+  color: #232323;
+  font-size: 1.04rem;
+  line-height: 1.35;
+  font-weight: 500;
 }
 
 .got-it-table-study-expanded th:first-child,
@@ -921,23 +934,42 @@ a.secondary {
   width: 32%;
 }
 
+.got-it-table-study-reference {
+  height: auto;
+  background-color: #f1f1f1;
+  border-color: #bbbbbb;
+}
+
+.got-it-table-study-reference th,
+.got-it-table-study-reference td {
+  background-color: #f1f1f1;
+  border-color: #bbbbbb;
+}
+
+.got-it-table-study-reference th {
+  padding: 0.95rem 1.2rem;
+}
+
+.got-it-table-study-reference td {
+  padding: 1rem 1.2rem 1.15rem;
+}
+
+.got-it-table-study-reference thead tr,
+.got-it-table-study-reference tbody tr {
+  height: auto;
+}
+
 .got-it-table-quotes-survey th:first-child,
 .got-it-table-quotes-survey td:first-child {
   width: 35%;
 }
 
-.got-it-table-study-expanded,
 .got-it-table-quotes-survey {
   height: 680px;
 }
 
-.got-it-table-study-expanded thead tr,
 .got-it-table-quotes-survey thead tr {
   height: 74px;
-}
-
-.got-it-table-study-expanded tbody tr {
-  height: 606px;
 }
 
 .got-it-table-quotes-survey tbody tr {
