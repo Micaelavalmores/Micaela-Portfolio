@@ -127,3 +127,66 @@
 .links a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 1100px) {
+  .footer {
+    height: auto;
+    min-height: 20rem;
+    padding: 1.25rem 0 1.5rem;
+  }
+
+  .leftContainer {
+    padding: 2rem 2rem 1rem;
+  }
+
+  .rightContainer {
+    padding: 2rem;
+    gap: 2.5rem;
+  }
+
+  .resumeDownload a,
+  .contactLink,
+  .resumeLink {
+    font-size: 1.4rem;
+  }
+
+  .footer p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 4rem;
+  }
+
+  .leftContainer,
+  .rightContainer {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .rightContainer {
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.25rem;
+  }
+
+  .socials {
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .socials img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .resumeDownload a,
+  .contactLink,
+  .resumeLink {
+    font-size: 1rem;
+  }
+}

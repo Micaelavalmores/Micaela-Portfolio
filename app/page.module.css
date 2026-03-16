@@ -359,6 +359,212 @@
   text-align: left;
 }
 
+@media (max-width: 1200px) {
+  .page {
+    margin: 1rem 3rem 0;
+  }
+
+  .intro-sec h1 {
+    font-size: 4.5rem;
+  }
+
+  .intro-sec p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    margin: 1rem 1.5rem 0;
+  }
+
+  .intro-sec {
+    margin: 3.5rem 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-sec h1 {
+    font-size: 3.2rem;
+  }
+
+  .intro-greet {
+    font-size: 1.7rem;
+  }
+
+  .intro-sec p {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-chip {
+    padding: 0.85rem 1.5rem;
+  }
+
+  .Proj-sec,
+  .about-sec,
+  .contact-sec {
+    margin: 4.5rem 0;
+  }
+
+  .Proj-sec h1,
+  .about-sec h1,
+  .contact-sec h1 {
+    font-size: 2.15rem;
+  }
+
+  .proj-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-quote {
+    font-size: 1.2rem;
+    padding: 1.25rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .skill-circle {
+    width: 84px;
+    height: 84px;
+  }
+
+  .skill-item p {
+    font-size: 0.85rem;
+  }
+
+  .Plat-logos {
+    gap: 1.2rem;
+    justify-content: flex-start;
+  }
+
+  .Plat-logos img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    margin: 0.75rem 0.5rem 0;
+  }
+
+  .intro-sec {
+    margin: 2.5rem 0;
+    gap: 1rem;
+  }
+
+  .intro-sec h1 {
+    font-size: 2.15rem;
+    line-height: 1.08;
+  }
+
+  .intro-greet {
+    font-size: 1.5rem;
+  }
+
+  .intro-sec p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .cta-buttons {
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .cta-chip {
+    width: auto;
+    min-width: 140px;
+    padding: 0.75rem 1rem;
+  }
+
+  .Proj-sec,
+  .about-sec,
+  .Plat-sec,
+  .contact-sec {
+    margin: 3rem 0;
+    gap: 1.5rem;
+  }
+
+  .Proj-sec h1,
+  .about-sec h1,
+  .contact-sec h1 {
+    font-size: 1.85rem;
+  }
+
+  .about-content {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .about-text {
+    gap: 0.65rem;
+  }
+
+  .about-text p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .about-quote {
+    font-size: 0.92rem;
+    margin: 0.35rem 0;
+    padding: 0.35rem;
+  }
+
+  .about-quote footer {
+    font-size: 0.75rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .skill-circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .skill-item {
+    gap: 0.5rem;
+  }
+
+  .skill-item p {
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+
+  .Plat-sec h1 {
+    font-size: 1.7rem;
+  }
+
+  .Plat-logos {
+    gap: 0.7rem;
+  }
+
+  .Plat-logos img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
 a.primary {
   background: var(--text-primary);
   color: var(--background);
