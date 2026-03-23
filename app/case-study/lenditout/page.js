@@ -5,6 +5,8 @@ import styles from '../../page.module.css'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
+const LENDITOUT_ACTIVE_TAB_STORAGE_KEY = 'lenditout-active-tab'
+
 export default function LendItOutCaseStudy() {
   const [activeTab, setActiveTab] = useState('research')
   const [expandedImage, setExpandedImage] = useState(null)
@@ -16,6 +18,18 @@ export default function LendItOutCaseStudy() {
     { id: 'testing', label: 'Testing' },
     { id: 'result', label: 'Result' },
   ]
+
+  useEffect(() => {
+    const storedTab = window.localStorage.getItem(LENDITOUT_ACTIVE_TAB_STORAGE_KEY)
+
+    if (storedTab && tabs.some((tab) => tab.id === storedTab)) {
+      setActiveTab(storedTab)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem(LENDITOUT_ACTIVE_TAB_STORAGE_KEY, activeTab)
+  }, [activeTab])
 
   useEffect(() => {
     if (!expandedImage) return
@@ -170,28 +184,6 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                     </div>
                   </div>
 
-                  <div className={styles['research-image-two-col']}>
-                    <div className={styles['research-image-half']}>
-                      <img
-                        src="/images/caseStudyImages/lenditout-research1.png"
-                        alt="LendItOut research snapshot"
-                        className={styles['zoomable-image']}
-                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                        onClick={() => openImage('/images/caseStudyImages/lenditout-research1.png', 'LendItOut research snapshot')}
-                      />
-                      <span className={styles['research-image-caption']}>Research snapshot</span>
-                    </div>
-                    <div className={styles['research-image-half']}>
-                      <img
-                        src="/images/caseStudyImages/lenditout-research2.png"
-                        alt="LendItOut research snapshot"
-                        className={styles['zoomable-image']}
-                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                        onClick={() => openImage('/images/caseStudyImages/lenditout-research2.png', 'LendItOut research snapshot')}
-                      />
-                      <span className={styles['research-image-caption']}>Research snapshot</span>
-                    </div>
-                  </div>
 
                   <div className={styles['research-text-split']}>
                     <div className={styles['research-text-image']}>
@@ -211,22 +203,39 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                       <p>
                         From user research insights, I proposed targeted solutions to address key marketplace pain points, balancing practicality with the project's scope.
                       </p>
-                      <p className={styles['research-subheading']}>Solutions I proposed:</p>
-                      <ul className={styles['research-bullet-list']}>
-                        <li><strong>Mandatory Account Verification:</strong> Required before buying or selling to minimize anonymous transaction risks, prioritizing safety and streamlined interactions.</li>
-                        <li><strong>Security Deposits:</strong> Applied to listings above a price threshold, empowering owners with control and reducing damage or theft risks.</li>
-                        <li><strong>Category-Based Pricing Ranges:</strong> Defined minimum/maximum prices per category to prevent overcharging or underpricing.</li>
-                      </ul>
-                      <p>
-                        These measures have limitations but suited our MVP constraints. With more freedom, I'd integrate AI for enhanced safety.
-                      </p>
-                      <p className={styles['research-subheading']}>AI would make LendItOut safer and smarter by:</p>
-                      <ul className={styles['research-bullet-list']}>
-                        <li>Automating fraud/risk detection for trust.</li>
-                        <li>Smartening deposits/verification for rentals.</li>
-                        <li>Offering intelligent pricing/discovery recommendations.</li>
-                        <li>Streamlining onboarding, support, and notifications.</li>
-                      </ul>
+                      <div className={styles['case-study-table-wrap']}>
+                        <table className={`${styles['got-it-table']} ${styles['lenditout-solutions-table']}`}>
+                          <thead>
+                            <tr>
+                              <th>Proposed Solution</th>
+                              <th>Purpose / Benefit</th>
+                              <th>Future AI Enhancement</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Mandatory Account Verification</strong></td>
+                              <td>Requires users to verify accounts before buying or selling, minimizing anonymous transaction risks and enhancing trust.</td>
+                              <td>AI could automatically validate identity documents and detect suspicious or fraudulent profiles.</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Security Deposits</strong></td>
+                              <td>Applies deposits on listings above a set price threshold, empowering owners to control risk and reduce chances of damage or theft.</td>
+                              <td>AI could dynamically adjust deposit amounts based on risk scores, item value, and renter history.</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Category-Based Pricing Ranges</strong></td>
+                              <td>Establishes minimum and maximum pricing per category to prevent overcharging or underpricing.</td>
+                              <td>AI could suggest optimal rates through intelligent pricing models and personalized discovery recommendations.</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Limitations (MVP Context)</strong></td>
+                              <td>These safety measures were effective but constrained by MVP scope and resources.</td>
+                              <td>With more flexibility, AI integration would enhance safety, personalization, and automation across onboarding, support, and notifications.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -235,7 +244,7 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
 
             {activeTab === 'design' && (
               <div className={styles['tab-pane']}>
-                <div className={styles['design-content']}>
+                <div className={`${styles['design-content']} ${styles['lenditout-design-content']}`}>
                     <div className={styles['research-summary']}>
                         <h4>Research-to-Design: Crafting LendItOut's Screens</h4>
                         <p>After completing comprehensive research that shaped our end product vision—from user testing and competitive analysis of platforms like Facebook Marketplace and Kijiji to secondary studies on legality, compliance, and business models—our team advanced to designing key screens. We established a cohesive green-and-white color palette to symbolize sustainability, reinforce environmental responsibility in peer-to-peer sharing, and create a fresh, unified brand identity that resonates with eco-conscious users.</p>
@@ -458,26 +467,6 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
               <div className={styles['tab-pane']}>
                 <div className={styles['testing-content']}>
                   <div className={styles['testing-top']}>
-                    <div className={styles['testing-media-grid']}>
-                      <div className={styles['testing-image']}>
-                        <img
-                          src="/images/caseStudyImages/lenditout-testing1.png"
-                          alt="LendItOut testing session"
-                          className={styles['zoomable-image']}
-                          onClick={() => openImage('/images/caseStudyImages/lenditout-testing1.png', 'LendItOut testing session')}
-                        />
-                        <span className={styles['research-image-caption']}>Usability testing snapshot</span>
-                      </div>
-                      <div className={styles['testing-image']}>
-                        <img
-                          src="/images/caseStudyImages/lenditout-testing2.png"
-                          alt="LendItOut testing session"
-                          className={styles['zoomable-image']}
-                          onClick={() => openImage('/images/caseStudyImages/lenditout-testing2.png', 'LendItOut testing session')}
-                        />
-                        <span className={styles['research-image-caption']}>Usability testing snapshot</span>
-                      </div>
-                    </div>
                     <div className={styles['testing-text-block']}>
                       <h4>Usability Testing Kickoff</h4>
                       <p>
@@ -492,28 +481,125 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                     </div>
                   </div>
 
+                  <div className={styles['lenditout-testing-table-block']}>
+                    <div className={styles['case-study-table-wrap']}>
+                      <table className={`${styles['got-it-table']} ${styles['lenditout-testing-table']}`}>
+                        <thead>
+                          <tr>
+                            <th>Question</th>
+                            <th>Key Participant Responses</th>
+                            <th>Patterns Observed</th>
+                            <th>Design Implications</th>
+                            <th>Recommended Improvements</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><strong>Did any part of the navigation feel too deep, hidden, or confusing?</strong></td>
+                            <td>Most participants felt navigation between pages was intuitive and not overwhelming.</td>
+                            <td>Strong overall navigation flow; no major pain points reported.</td>
+                            <td>Current depth works well for peer-to-peer rental marketplace.</td>
+                            <td>Maintain current structure; test with larger user cohorts for edge cases.</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Do any elements look clickable when they aren’t (or vice versa)?</strong></td>
+                            <td>No elements were misleading; a few users noted contrast issues on buttons before login.</td>
+                            <td>Minor visual feedback gaps pre-login; otherwise clear affordances.</td>
+                            <td>Login state affects perceived interactivity.</td>
+                            <td>Boost button contrast/hover states pre-login; add subtle micro-interactions.</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Was it easy to find a product (if you're searching)?</strong></td>
+                            <td>Most could find items with ease and appreciated price range filters.</td>
+                            <td>Filters effectively surface relevant listings.</td>
+                            <td>Search supports quick discovery in rental categories.</td>
+                            <td>Enhance with autocomplete and category presets for faster entry.</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Are there any features or functions you think are missing?</strong></td>
+                            <td>Common request for rental duration tools; users wanted to see clear home pages above defined tabs.</td>
+                            <td>Need for time-based filtering and hierarchical home view.</td>
+                            <td>Lacks advanced rental-specific search tools.</td>
+                            <td>Add duration sliders, calendar previews, and prioritized home feed tabs.</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Have you seen design suggestions that we made or missed that you'd noticed?</strong></td>
+                            <td>Some noted the design felt visual; one tester viewed structural clarity as an update.</td>
+                            <td>Visual appeal strong but some clarity gaps noted.</td>
+                            <td>Balance aesthetics with functional updates.</td>
+                            <td>Refine typography hierarchy; A/B test structural changes for clarity.</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Would you trust this platform with your payment/personal info? Why or why not?</strong></td>
+                            <td>All said they would trust with personal info if UI shows security; layout/experience showed potential, especially organized UI.</td>
+                            <td>Trust tied to visible security cues and clean organization.</td>
+                            <td>Security perception drives adoption.</td>
+                            <td>Add trust badges, SSL indicators, and privacy policy modals prominently.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
                   <div className={styles['testing-bottom']}>
-                    <div className={styles['testing-text-block']}>
+                    <div className={styles['lenditout-testing-issues-block']}>
                       <h4>Issues the User Testing Revealed</h4>
                       <p>
                         We evaluated the app for navigation ease, design consistency, content clarity, and interactive functionality—uncovering targeted friction points that shaped our refinements.
                       </p>
-                      <ul className={styles['research-bullet-list']}>
-                        <li><strong>Navigation Challenges:</strong> Difficulty distinguishing buy/rent categories; FAQs/Help Center buried in burger menu.</li>
-                        <li><strong>Design Friction:</strong> Small tap targets, inconsistent button labels, missing interactivity (e.g., maps, location dropdowns).</li>
-                        <li><strong>Content Overload:</strong> Create Listing felt dense; payment/delivery info wordy and intimidating.</li>
-                      </ul>
-                    </div>
-                    <div className={styles['testing-text-block']}>
-                      <h4>Based on Insights, this is the Approach</h4>
-                      <p>
-                        We prioritized actionable fixes for navigation, design, content, and support—directly addressing user feedback to elevate usability and trust.
-                      </p>
-                      <ul className={styles['research-bullet-list']}>
-                        <li>Clarify navigation with distinct visual cues for buy/rent.</li>
-                        <li>Surface support tools prominently; enlarge/standardize interactive elements.</li>
-                        <li>Break text-heavy flows into step-by-step sequences.</li>
-                      </ul>
+                      <div className={styles['case-study-table-wrap']}>
+                        <table className={`${styles['got-it-table']} ${styles['lenditout-issues-table']}`}>
+                          <thead>
+                            <tr>
+                              <th>Category</th>
+                              <th>Specific Issues</th>
+                              <th>Impact on Users</th>
+                              <th>Suggested Quick Fixes</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Navigation Challenges</strong></td>
+                              <td>
+                                - Difficulty distinguishing buy/rent categories<br />
+                                - FAQs/Help Center buried in burger menu
+                              </td>
+                              <td>Confusion in core marketplace flow; reduced self-service efficiency</td>
+                              <td>
+                                - Add prominent buy/rent toggle<br />
+                                - Move Help to fixed footer or tab bar
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Design Friction</strong></td>
+                              <td>
+                                - Small tap targets<br />
+                                - Inconsistent button labels<br />
+                                - Missing interactivity (maps, location dropdowns)
+                              </td>
+                              <td>Frustrated interactions; perceived unpolished product</td>
+                              <td>
+                                - Increase touch targets to 48x48dp<br />
+                                - Standardize labels (e.g., &quot;Rent Now&quot;)<br />
+                                - Add skeleton loaders + dropdowns
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Content Overload</strong></td>
+                              <td>
+                                - Create Listing feels dense<br />
+                                - Payment/delivery info wordy and intimidating
+                              </td>
+                              <td>Hesitation to complete actions; cart abandonment</td>
+                              <td>
+                                - Progressive disclosure (show less initially)<br />
+                                - Card-based summaries<br />
+                                - Tooltips for dense sections
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
