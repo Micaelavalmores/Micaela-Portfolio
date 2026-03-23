@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link'
 import styles from '../page.module.css'
 import Navbar from '../components/Navbar'
 import Chip from '../components/Chip'
@@ -8,26 +7,61 @@ import ProjectNav from '../components/ProjectNav'
 import FtProj from '../components/FtProj'
 import DesignGallery from '../components/DesignGallery'
 import Contact from '../components/Contact'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState(0)
+
+  useEffect(() => {
+    document.body.classList.add(styles['scroll-snap'])
+    document.documentElement.classList.add(styles['scroll-snap'])
+
+    const sections = document.querySelectorAll(`.${styles['scroll-section']}`)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle(styles['scroll-section-visible'], entry.isIntersecting)
+        })
+      },
+      { threshold: 0.15 }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => {
+      observer.disconnect()
+      document.body.classList.remove(styles['scroll-snap'])
+      document.documentElement.classList.remove(styles['scroll-snap'])
+    }
+  }, [])
   return (
     <>
       <main className={styles.page}>
         <nav className='Nav-bar'>
         </nav>  
         <Navbar />
-        <div className={styles['intro-sec']}>
+        <div className={`${styles['intro-sec']} ${styles['scroll-section']}`}>
           <span className={styles['intro-greet']}>Hi, I am a UX/UI Designer</span>
           <h1>MICAELA VALMORES</h1> 
           <p>I turn complex problems into simple, accessible, and user-centred solutions that balance usability and aesthetics.</p>
           <div className={styles['cta-buttons']}>
-            <Chip label="Send an Email" variant="filled" className={styles['cta-chip']} />
-            <Chip label="Download Resume" variant="outlined" className={styles['cta-chip']} />
+            <Chip
+              label="Send an Email"
+              variant="filled"
+              className={styles['cta-chip']}
+              href="mailto:micaela.valmores@gmail.com"
+            />
+            <Chip
+              label="Download Resume"
+              variant="outlined"
+              className={styles['cta-chip']}
+              href="/resources/Resume_Micaela_Valmores.png"
+              download
+            />
             </div>
         </div>
-        <div className={styles['Proj-sec']}>
+        <div className={`${styles['Proj-sec']} ${styles['scroll-section']}`}>
           <h1>FEATURED PROJECTS</h1>
           <div className={styles['Proj-nav']}>
             <ProjectNav tabs={["Case Study", "Design"]} onTabChange={(index) => setActiveTab(index)} />
@@ -82,7 +116,7 @@ export default function HomePage() {
             )}
           </div>
         </div>
-        <div className={styles['about-sec']}>
+        <div id="about-sec" className={`${styles['about-sec']} ${styles['scroll-section']}`}>
           <h1>ABOUT ME</h1>
           <div className={styles['about-content']}>
             <div className={styles['about-image']}>
@@ -110,7 +144,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className={styles['Plat-sec']}>
+        <div className={`${styles['Plat-sec']} ${styles['scroll-section']}`}>
           <h1>TOOLS I CAN USE</h1>
           <div className={styles['Plat-logos']}>
             <img src="/icons/github.svg" alt="GitHub Logo" width={100} height={100} />
@@ -124,7 +158,7 @@ export default function HomePage() {
             <img src="/icons/vscode.svg" alt="VS Code Logo" width={100} height={100} />
           </div>
         </div>
-        <div className={styles['contact-sec']}>
+        <div id="contact-sec" className={`${styles['contact-sec']} ${styles['scroll-section']}`}>
           <h1>READY TO CONNECT?</h1>
           <Contact />
         </div>

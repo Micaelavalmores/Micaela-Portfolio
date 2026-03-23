@@ -36,7 +36,7 @@ export default function Footer() {
             <h2>Contact Me</h2>
             <a
               href="mailto:micaela.valmores@gmail.com"
-              style={{ color: 'inherit', textDecoration: 'none', fontSize: '2rem', fontWeight: '600' }}
+              className={styles.contactLink}
             >
               micaela.valmores@gmail.com
             </a>
@@ -46,9 +46,9 @@ export default function Footer() {
             {/* Resume download link */}
             <div>
               <a
-                href="/path/to/resume.pdf" // Update this path when the file is added
+                href="/resources/Resume_Micaela_Valmores.png" // Update this path when the file is added
                 download
-                className={styles.resumeDownload}
+                className={styles.resumeLink}
               >
                 Download my resume here ↗
               </a>

@@ -29,7 +29,7 @@ export default function FtProj({
 
           <div className={styles.tagsContainer}>
             {tags.map((tag, index) => (
-              <Chip key={index} label={tag} variant="outlined" />
+              <Chip key={index} label={tag} variant="tag" />
             ))}
           </div>
         </div>
