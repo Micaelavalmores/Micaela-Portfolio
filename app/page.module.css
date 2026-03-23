@@ -1671,6 +1671,16 @@ a.secondary {
   .got-it-matrix-block h4 {
     font-size: 1.45rem;
   }
+
+  .got-it-result-grid .result-tile-full {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+
+  .got-it-result-grid .result-tile-half {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
 }
 
 .case-study-cta-section {
