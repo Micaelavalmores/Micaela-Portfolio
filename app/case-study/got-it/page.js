@@ -21,8 +21,8 @@ export default function GotItCaseStudy() {
   ]
 
   const resultWebsiteCard = {
-    title: 'Dashboard Page',
-    description: 'shshshshsh.',
+    title: 'Interactable Demo of Got It WebApp',
+    description: 'Curious how it works? Dive in and try it yourself—this live demo is fully interactive.',
     url: 'https://got-it-phi.vercel.app/dashboard',
   }
 
