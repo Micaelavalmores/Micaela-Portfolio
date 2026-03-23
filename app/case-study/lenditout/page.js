@@ -170,28 +170,6 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                     </div>
                   </div>
 
-                  <div className={styles['research-image-two-col']}>
-                    <div className={styles['research-image-half']}>
-                      <img
-                        src="/images/caseStudyImages/lenditout-research1.png"
-                        alt="LendItOut research snapshot"
-                        className={styles['zoomable-image']}
-                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                        onClick={() => openImage('/images/caseStudyImages/lenditout-research1.png', 'LendItOut research snapshot')}
-                      />
-                      <span className={styles['research-image-caption']}>Research snapshot</span>
-                    </div>
-                    <div className={styles['research-image-half']}>
-                      <img
-                        src="/images/caseStudyImages/lenditout-research2.png"
-                        alt="LendItOut research snapshot"
-                        className={styles['zoomable-image']}
-                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                        onClick={() => openImage('/images/caseStudyImages/lenditout-research2.png', 'LendItOut research snapshot')}
-                      />
-                      <span className={styles['research-image-caption']}>Research snapshot</span>
-                    </div>
-                  </div>
 
                   <div className={styles['research-text-split']}>
                     <div className={styles['research-text-image']}>
@@ -211,22 +189,39 @@ Unlike traditional marketplaces, which focus solely on buying and selling, LendI
                       <p>
                         From user research insights, I proposed targeted solutions to address key marketplace pain points, balancing practicality with the project's scope.
                       </p>
-                      <p className={styles['research-subheading']}>Solutions I proposed:</p>
-                      <ul className={styles['research-bullet-list']}>
-                        <li><strong>Mandatory Account Verification:</strong> Required before buying or selling to minimize anonymous transaction risks, prioritizing safety and streamlined interactions.</li>
-                        <li><strong>Security Deposits:</strong> Applied to listings above a price threshold, empowering owners with control and reducing damage or theft risks.</li>
-                        <li><strong>Category-Based Pricing Ranges:</strong> Defined minimum/maximum prices per category to prevent overcharging or underpricing.</li>
-                      </ul>
-                      <p>
-                        These measures have limitations but suited our MVP constraints. With more freedom, I'd integrate AI for enhanced safety.
-                      </p>
-                      <p className={styles['research-subheading']}>AI would make LendItOut safer and smarter by:</p>
-                      <ul className={styles['research-bullet-list']}>
-                        <li>Automating fraud/risk detection for trust.</li>
-                        <li>Smartening deposits/verification for rentals.</li>
-                        <li>Offering intelligent pricing/discovery recommendations.</li>
-                        <li>Streamlining onboarding, support, and notifications.</li>
-                      </ul>
+                      <div className={styles['case-study-table-wrap']}>
+                        <table className={`${styles['got-it-table']} ${styles['lenditout-solutions-table']}`}>
+                          <thead>
+                            <tr>
+                              <th>Proposed Solution</th>
+                              <th>Purpose / Benefit</th>
+                              <th>Future AI Enhancement</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Mandatory Account Verification</strong></td>
+                              <td>Requires users to verify accounts before buying or selling, minimizing anonymous transaction risks and enhancing trust.</td>
+                              <td>AI could automatically validate identity documents and detect suspicious or fraudulent profiles.</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Security Deposits</strong></td>
+                              <td>Applies deposits on listings above a set price threshold, empowering owners to control risk and reduce chances of damage or theft.</td>
+                              <td>AI could dynamically adjust deposit amounts based on risk scores, item value, and renter history.</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Category-Based Pricing Ranges</strong></td>
+                              <td>Establishes minimum and maximum pricing per category to prevent overcharging or underpricing.</td>
+                              <td>AI could suggest optimal rates through intelligent pricing models and personalized discovery recommendations.</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Limitations (MVP Context)</strong></td>
+                              <td>These safety measures were effective but constrained by MVP scope and resources.</td>
+                              <td>With more flexibility, AI integration would enhance safety, personalization, and automation across onboarding, support, and notifications.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>

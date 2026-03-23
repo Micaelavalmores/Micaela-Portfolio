@@ -935,6 +935,12 @@ a.secondary {
   /* margin-top: 2rem; */
 }
 
+.case-study-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .got-it-concept {
   display: flex;
   flex-direction: column;
@@ -1056,6 +1062,33 @@ a.secondary {
 .got-it-table-three-col th:nth-child(2),
 .got-it-table-three-col td:nth-child(2) {
   width: 28%;
+}
+
+.lenditout-solutions-table {
+  min-width: 760px;
+}
+
+.lenditout-solutions-table th,
+.lenditout-solutions-table td {
+  padding: 1rem 1.1rem;
+}
+
+.lenditout-solutions-table th {
+  background-color: #f5f2ef;
+}
+
+.lenditout-solutions-table td {
+  padding-bottom: 1rem;
+}
+
+.lenditout-solutions-table th:first-child,
+.lenditout-solutions-table td:first-child {
+  width: 20%;
+}
+
+.lenditout-solutions-table th:nth-child(2),
+.lenditout-solutions-table td:nth-child(2) {
+  width: 39%;
 }
 
 .got-it-table-digital th:first-child,
@@ -1357,7 +1390,7 @@ a.secondary {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  /* display: block; */
 }
 
 .design-bottom {
