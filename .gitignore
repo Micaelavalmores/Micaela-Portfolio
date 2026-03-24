@@ -44,7 +44,7 @@ next-env.d.ts
 .history
 
 # node_modules/
-# .history/
+.history/
 
 # /history.txt
 # .history/**/*
