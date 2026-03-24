@@ -75,3 +75,33 @@
     height: 430px;
   }
 }
+
+@media (max-width: 430px) {
+  .heading {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    border-radius: 12px;
+    padding: 0.85rem;
+  }
+
+  .card h4 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .frameWrap {
+    height: 260px;
+  }
+
+  .frame {
+    --embed-scale: 0.55;
+  }
+}

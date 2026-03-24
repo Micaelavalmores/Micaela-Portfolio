@@ -567,35 +567,58 @@ export default function GotItCaseStudy() {
                   <div className={`${styles['tab-pane']} ${styles['no-tab-fade']}`}>
                     <div className={styles['testing-content']}>
                       <div className={styles['testing-top']}>
-                        <div className={styles['testing-media-grid']}>
-                          <div className={styles['testing-image']} aria-hidden="true">
-                          <img
-                            src="/images/caseStudyImages/got-it-testing-img1.png"
-                            alt="Got It design insight"
-                            className={styles['zoomable-image']}
-                            onClick={() => openImage('/images/caseStudyImages/got-it-testing-img1.png', 'Got It design insight')}
-                          />
-                          <span className={styles['research-image-caption']}>
-                            Sample From Usability Testing Session
-                          </span>
-                          </div>
-                          <div className={styles['testing-image']} aria-hidden="true">
-                            <img
-                            src="/images/caseStudyImages/got-it-testing-img2.png"
-                            alt="Got It design insight"
-                            className={styles['zoomable-image']}
-                            onClick={() => openImage('/images/caseStudyImages/got-it-testing-img2.png', 'Got It design insight')}
-                          />
-                          <span className={styles['research-image-caption']}>
-                            Sample From Usability Testing Session
-                          </span>
-                          </div>
-                        </div>
                         <div className={styles['testing-text-block']}>
                           <h4>Putting the First Prototype to the Test</h4>
                           <p>During this testing phase, I led usability sessions to validate our first iteration and gather actionable insights for the next version of the Got It web application.</p>
                           <p>The primary goal was to understand how neurodiverse electrical apprentices interacted with key workflows and to identify barriers that might hinder their learning experience.</p>
                           <p>Overall, participants reported that the core flows—uploading documents, opening built-in textbooks, generating AI outputs, saving or printing content, and renaming study cards—were generally easy to complete once discovered. Several users specifically mentioned that the interface “flows nicely,” feels predictable, and would likely support their study routines by reducing friction and confusion.</p>
+                        </div>
+                      </div>
+
+                      <div className={styles['lenditout-testing-table-block']}>
+                        <div className={styles['case-study-table-wrap']}>
+                          <table className={`${styles['got-it-table']} ${styles['got-it-testing-table']}`}>
+                            <thead>
+                              <tr>
+                                <th>Task</th>
+                                <th>Goal</th>
+                                <th>Prompts/Questions</th>
+                                <th>Observations</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><strong>1</strong></td>
+                                <td>Test document upload &amp; simplification</td>
+                                <td>Upload doc -&gt; generate simplified version</td>
+                                <td>Upload intuitive but missing progress indicator; unclear multi-select options</td>
+                              </tr>
+                              <tr>
+                                <td><strong>2</strong></td>
+                                <td>Test textbook library &amp; mind map output</td>
+                                <td>Open textbook -&gt; generate mind map -&gt; evaluate</td>
+                                <td>Recognized as mind map; familiar OneNote feel; wants more visual hierarchy</td>
+                              </tr>
+                              <tr>
+                                <td><strong>3</strong></td>
+                                <td>Preference: manual vs auto-generation</td>
+                                <td>Choose features or auto-generate all?</td>
+                                <td><strong>Overwhelmingly prefer auto-all</strong>; hide tabs option needed</td>
+                              </tr>
+                              <tr>
+                                <td><strong>4</strong></td>
+                                <td>Split-screen navigation</td>
+                                <td>Find original doc -&gt; close it</td>
+                                <td>Unlabeled buttons confuse; toolbar doesn't collapse intuitively</td>
+                              </tr>
+                              <tr>
+                                <td><strong>5</strong></td>
+                                <td>Text adjustment discovery</td>
+                                <td>Emphasize key info in simplified doc</td>
+                                <td><strong>Pen icon intuitive</strong>; editing flow worked well</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
 

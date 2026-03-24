@@ -12,6 +12,34 @@ import { useEffect, useState } from 'react'
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState(0)
 
+  const skills = [
+    {
+      label: 'Research & Strategy',
+      icon: '/icons/idea.svg',
+      alt: 'Research and strategy icon'
+    },
+    {
+      label: 'Design & Prototyping',
+      icon: '/icons/figma-icon.svg',
+      alt: 'Design and prototyping icon'
+    },
+    {
+      label: 'Visual & Interaction',
+      icon: '/icons/touch-interaction-01.svg',
+      alt: 'Visual and interaction icon'
+    },
+    {
+      label: 'Collaboration & Soft Skills',
+      icon: '/icons/user-multiple-02.svg',
+      alt: 'Collaboration and soft skills icon'
+    },
+    {
+      label: 'Graphic Designing',
+      icon: '/icons/tablet-pen.svg',
+      alt: 'Graphic designing icon'
+    }
+  ]
+
   useEffect(() => {
     document.body.classList.add(styles['scroll-snap'])
     document.documentElement.classList.add(styles['scroll-snap'])
@@ -63,9 +91,9 @@ export default function HomePage() {
         </div>
         <div className={`${styles['Proj-sec']} ${styles['scroll-section']}`}>
           <h1>FEATURED PROJECTS</h1>
-          <div className={styles['Proj-nav']}>
-            <ProjectNav tabs={["Case Study", "Design"]} onTabChange={(index) => setActiveTab(index)} />
-          </div>
+          {/* <div className={styles['Proj-nav']}>
+            <ProjectNav tabs={["Case Study"]} onTabChange={(index) => setActiveTab(index)} />
+          </div> */}
           <div className={styles['Proj-cards']}>
             {activeTab === 0 ? (
               <div className={styles['proj-grid']}>
@@ -135,10 +163,16 @@ export default function HomePage() {
           <div className={styles['about-skills']}>
             <h2>STUFF I'M GOOD AT</h2>
             <div className={styles['skills-grid']}>
-              {['Research & Strategy', 'Design & Prototyping', 'Visual & Interaction', 'Collaboration & Soft Skills', 'Graphic Designing'].map((skill, index) => (
+              {skills.map((skill, index) => (
                 <div key={index} className={styles['skill-item']}>
-                  <div className={styles['skill-circle']}></div>
-                  <p>{skill}</p>
+                  <div className={styles['skill-circle']}>
+                    <img
+                      src={skill.icon}
+                      alt={skill.alt}
+                      className={styles['skill-icon']}
+                    />
+                  </div>
+                  <p>{skill.label}</p>
                 </div>
               ))}
             </div>
