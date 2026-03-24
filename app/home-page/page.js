@@ -63,9 +63,9 @@ export default function HomePage() {
         </div>
         <div className={`${styles['Proj-sec']} ${styles['scroll-section']}`}>
           <h1>FEATURED PROJECTS</h1>
-          <div className={styles['Proj-nav']}>
-            <ProjectNav tabs={["Case Study", "Design"]} onTabChange={(index) => setActiveTab(index)} />
-          </div>
+          {/* <div className={styles['Proj-nav']}>
+            <ProjectNav tabs={["Case Study"]} onTabChange={(index) => setActiveTab(index)} />
+          </div> */}
           <div className={styles['Proj-cards']}>
             {activeTab === 0 ? (
               <div className={styles['proj-grid']}>

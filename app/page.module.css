@@ -1169,6 +1169,40 @@ a.secondary {
   width: 22%;
 }
 
+.got-it-testing-table {
+  min-width: 1100px;
+  height: auto;
+}
+
+.got-it-testing-table th {
+  background-color: #f5f2ef;
+}
+
+.got-it-testing-table th,
+.got-it-testing-table td {
+  padding: 1rem;
+}
+
+.got-it-testing-table th:first-child,
+.got-it-testing-table td:first-child {
+  width: 7%;
+}
+
+.got-it-testing-table th:nth-child(2),
+.got-it-testing-table td:nth-child(2) {
+  width: 24%;
+}
+
+.got-it-testing-table th:nth-child(3),
+.got-it-testing-table td:nth-child(3) {
+  width: 31%;
+}
+
+.got-it-testing-table th:nth-child(4),
+.got-it-testing-table td:nth-child(4) {
+  width: 38%;
+}
+
 .got-it-table-digital th:first-child,
 .got-it-table-digital td:first-child {
   width: 18%;
@@ -1703,12 +1737,13 @@ a.secondary {
   margin-bottom: 0;
 }
 
-/* .testing-bottom {
+.testing-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   align-items: start;
-} */
+  margin-top: -7rem;
+}
 
 .result-content {
   display: flex;

@@ -19,6 +19,7 @@
 .active {
   background-color: #A2020C;
   color: #ffffff;
+  min-width: 290px;
 }
 
 .inactive {
