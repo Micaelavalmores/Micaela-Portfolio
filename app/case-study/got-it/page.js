@@ -567,35 +567,71 @@ export default function GotItCaseStudy() {
                   <div className={`${styles['tab-pane']} ${styles['no-tab-fade']}`}>
                     <div className={styles['testing-content']}>
                       <div className={styles['testing-top']}>
-                        <div className={styles['testing-media-grid']}>
-                          <div className={styles['testing-image']} aria-hidden="true">
-                          <img
-                            src="/images/caseStudyImages/got-it-testing-img1.png"
-                            alt="Got It design insight"
-                            className={styles['zoomable-image']}
-                            onClick={() => openImage('/images/caseStudyImages/got-it-testing-img1.png', 'Got It design insight')}
-                          />
-                          <span className={styles['research-image-caption']}>
-                            Sample From Usability Testing Session
-                          </span>
-                          </div>
-                          <div className={styles['testing-image']} aria-hidden="true">
-                            <img
-                            src="/images/caseStudyImages/got-it-testing-img2.png"
-                            alt="Got It design insight"
-                            className={styles['zoomable-image']}
-                            onClick={() => openImage('/images/caseStudyImages/got-it-testing-img2.png', 'Got It design insight')}
-                          />
-                          <span className={styles['research-image-caption']}>
-                            Sample From Usability Testing Session
-                          </span>
-                          </div>
-                        </div>
                         <div className={styles['testing-text-block']}>
                           <h4>Putting the First Prototype to the Test</h4>
                           <p>During this testing phase, I led usability sessions to validate our first iteration and gather actionable insights for the next version of the Got It web application.</p>
                           <p>The primary goal was to understand how neurodiverse electrical apprentices interacted with key workflows and to identify barriers that might hinder their learning experience.</p>
                           <p>Overall, participants reported that the core flows—uploading documents, opening built-in textbooks, generating AI outputs, saving or printing content, and renaming study cards—were generally easy to complete once discovered. Several users specifically mentioned that the interface “flows nicely,” feels predictable, and would likely support their study routines by reducing friction and confusion.</p>
+                        </div>
+                      </div>
+
+                      <div className={styles['lenditout-testing-table-block']}>
+                        <div className={styles['case-study-table-wrap']}>
+                          <table className={`${styles['got-it-table']} ${styles['lenditout-testing-table']}`}>
+                            <thead>
+                              <tr>
+                                <th>Question</th>
+                                <th>Key Participant Responses</th>
+                                <th>Patterns Observed</th>
+                                <th>Design Implications</th>
+                                <th>Recommended Improvements</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><strong>Did any part of the navigation feel too deep, hidden, or confusing?</strong></td>
+                                <td>Most participants felt navigation between pages was intuitive and not overwhelming.</td>
+                                <td>Strong overall navigation flow; no major pain points reported.</td>
+                                <td>Current depth works well for peer-to-peer rental marketplace.</td>
+                                <td>Maintain current structure; test with larger user cohorts for edge cases.</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Do any elements look clickable when they aren’t (or vice versa)?</strong></td>
+                                <td>No elements were misleading; a few users noted contrast issues on buttons before login.</td>
+                                <td>Minor visual feedback gaps pre-login; otherwise clear affordances.</td>
+                                <td>Login state affects perceived interactivity.</td>
+                                <td>Boost button contrast/hover states pre-login; add subtle micro-interactions.</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Was it easy to find a product (if you're searching)?</strong></td>
+                                <td>Most could find items with ease and appreciated price range filters.</td>
+                                <td>Filters effectively surface relevant listings.</td>
+                                <td>Search supports quick discovery in rental categories.</td>
+                                <td>Enhance with autocomplete and category presets for faster entry.</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Are there any features or functions you think are missing?</strong></td>
+                                <td>Common request for rental duration tools; users wanted to see clear home pages above defined tabs.</td>
+                                <td>Need for time-based filtering and hierarchical home view.</td>
+                                <td>Lacks advanced rental-specific search tools.</td>
+                                <td>Add duration sliders, calendar previews, and prioritized home feed tabs.</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Have you seen design suggestions that we made or missed that you'd noticed?</strong></td>
+                                <td>Some noted the design felt visual; one tester viewed structural clarity as an update.</td>
+                                <td>Visual appeal strong but some clarity gaps noted.</td>
+                                <td>Balance aesthetics with functional updates.</td>
+                                <td>Refine typography hierarchy; A/B test structural changes for clarity.</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Would you trust this platform with your payment/personal info? Why or why not?</strong></td>
+                                <td>All said they would trust with personal info if UI shows security; layout/experience showed potential, especially organized UI.</td>
+                                <td>Trust tied to visible security cues and clean organization.</td>
+                                <td>Security perception drives adoption.</td>
+                                <td>Add trust badges, SSL indicators, and privacy policy modals prominently.</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
 

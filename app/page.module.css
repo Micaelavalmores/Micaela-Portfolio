@@ -1670,7 +1670,7 @@ a.secondary {
   font-size: 1.3rem;
   font-weight: 600;
   color: #000;
-  margin: 0 0 1rem 0;
+  margin: 2.5rem 0 1rem 0;
 }
 
 .testing-text-block p {
@@ -1678,7 +1678,7 @@ a.secondary {
   font-weight: 500;
   color: #000;
   line-height: 1.6;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .testing-text-block p:last-child {
