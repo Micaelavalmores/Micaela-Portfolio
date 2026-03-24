@@ -13,16 +13,13 @@ export default function Footer() {
             <p className={styles.desc}>Have a project in mind or just want to talk design? Reach out anytime.</p> 
         </div>
         <div className={styles.socials}>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.com/user/1281470251451678787" target="_blank" rel="noopener noreferrer">
             <img src="/icons/discord-logo.svg" alt="Discord" width={36} height={36} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Micaelavalmores" target="_blank" rel="noopener noreferrer">
             <img src="/icons/github-logo.svg" alt="GitHub" width={36} height={36} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/instagram-logo.svg" alt="Instagram" width={36} height={36} />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/micaela-valmores" target="_blank" rel="noopener noreferrer">
             <img src="/icons/linkedin-logo.svg" alt="LinkedIn" width={36} height={36} />
           </a>
         </div>
