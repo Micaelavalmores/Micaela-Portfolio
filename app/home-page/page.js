@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar'
 import Chip from '../components/Chip'
 import ProjectNav from '../components/ProjectNav'
 import FtProj from '../components/FtProj'
-import DesignGallery from '../components/DesignGallery'
 import Contact from '../components/Contact'
 import { useEffect, useState } from 'react'
 
@@ -91,9 +90,9 @@ export default function HomePage() {
         </div>
         <div className={`${styles['Proj-sec']} ${styles['scroll-section']}`}>
           <h1>FEATURED PROJECTS</h1>
-          {/* <div className={styles['Proj-nav']}>
-            <ProjectNav tabs={["Case Study"]} onTabChange={(index) => setActiveTab(index)} />
-          </div> */}
+          <div className={styles['Proj-nav']}>
+            <ProjectNav tabs={["Case Study", "Design"]} onTabChange={(index) => setActiveTab(index)} />
+          </div>
           <div className={styles['Proj-cards']}>
             {activeTab === 0 ? (
               <div className={styles['proj-grid']}>
@@ -130,18 +129,11 @@ export default function HomePage() {
                   />
                 ))}
               </div>
+            ) : activeTab === 1 ? (
+              <p>Design gallery coming soon.</p>
             ) : (
-              <DesignGallery 
-                designs={[
-                  { image: "/designs/Design-1.png", title: "Design 1" },
-                  { image: "/designs/Design-2.png", title: "Design 2" },
-                  { image: "/designs/Design-3.png", title: "Design 3" },
-                  { image: "/designs/Design-4.png", title: "Design 4" },
-                  { image: "/designs/Design-5.png", title: "Design 5" },                  
-                  { image: "/designs/Design-6.png", title: "Design 6" }
-                ]}
-              />
-            )}
+              <p>No projects to display.</p>
+            )}  
           </div>
         </div>
         <div id="about-sec" className={`${styles['about-sec']} ${styles['scroll-section']}`}>
