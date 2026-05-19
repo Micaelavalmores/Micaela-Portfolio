@@ -1,0 +1,328 @@
+/* ── Section wrapper ─────────────────────────────────────────────────────── */
+.gallerySection {
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.galleryHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  padding: 3rem 0;
+}
+
+/* ── Toggle switch ───────────────────────────────────────────────────────── */
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border-radius: 9999px;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.toggleOn {
+  background-color: #A2020C;
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.25s ease;
+  display: block;
+}
+
+.toggleOn .toggleThumb {
+  transform: translateX(20px);
+}
+
+/* ── Masonry columns ─────────────────────────────────────────────────────── */
+.masonry {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.masonryColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  /* height is not set — it grows naturally with the image's intrinsic ratio */
+}
+
+/* Make next/image fill the wrapper correctly while keeping aspect ratio */
+.imageWrap :global(.cardImg) {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* next/image fill mode needs an explicit height context; we override via global */
+.cardImage {
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+/* ── Hover overlay ───────────────────────────────────────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlayContent {
+  padding: 0.875rem 1rem;
+  color: #fff;
+  width: 100%;
+}
+
+.overlayTitle {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.overlayDate {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-bottom: 0.35rem;
+}
+
+.overlayDesc {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  opacity: 0.9;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.overlayBadge {
+  display: inline-block;
+  margin-top: 0.4rem;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* ── Carousel backdrop & modal ───────────────────────────────────────────── */
+.carouselBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselModal {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carouselImageWrap {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  padding-top: 1rem;
+}
+
+.carouselImage {
+  object-fit: contain;
+}
+
+.carouselClose {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.carouselClose:hover {
+  background: rgba(162,2,12,0.8);
+}
+
+.carouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselArrow:hover {
+  background: rgba(162,2,12,0.75);
+}
+
+.carouselArrowLeft {
+  left: 0.75rem;
+}
+
+.carouselArrowRight {
+  right: 0.75rem;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0 0.2rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.dotActive {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+.carouselCaption {
+  padding: 0.75rem 1.25rem 1.1rem;
+  color: #eee;
+}
+
+.carouselTitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.carouselDate {
+  display: block;
+  font-size: 0.78rem;
+  opacity: 0.65;
+  margin-bottom: 0.4rem;
+}
+
+.carouselDesc {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* ── Responsive column reduction ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .masonry {
+    gap: 0.6rem;
+  }
+  .masonryColumn {
+    gap: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry {
+    gap: 0.5rem;
+  }
+  .masonryColumn {
+    gap: 0.5rem;
+  }
+  .overlayTitle {
+    font-size: 0.85rem;
+  }
+}

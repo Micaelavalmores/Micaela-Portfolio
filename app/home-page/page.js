@@ -6,6 +6,7 @@ import Chip from '../components/Chip'
 import ProjectNav from '../components/ProjectNav'
 import FtProj from '../components/FtProj'
 import Contact from '../components/Contact'
+import DesignGallery from '../components/DesignGallery'
 import { useEffect, useState } from 'react'
 
 export default function HomePage() {
@@ -130,7 +131,95 @@ export default function HomePage() {
                 ))}
               </div>
             ) : activeTab === 1 ? (
-              <p>Design gallery coming soon.</p>
+              <DesignGallery designs={[
+                {
+                  id: "anderson-grant",
+                  image: "/designImages/AndersonGrant.png",
+                  title: "Anderson Grant",
+                  date: "",
+                  description: ""
+                },
+                {
+                  id: "ode-to-character",
+                  image: "/designImages/OdeToCharacter.png",
+                  title: "Ode to Character",
+                  date: "",
+                  description: ""
+                },
+                {
+                  id: "the-atelier-horizontal",
+                  image: "/designImages/TheAtelierHorizontal.png",
+                  title: "The Atelier",
+                  date: "",
+                  description: ""
+                },
+                {
+                  id: "the-atelier-vertical",
+                  image: "/designImages/TheAtelierVertical.png",
+                  title: "The Atelier (Vertical)",
+                  date: "",
+                  description: ""
+                },
+                {
+                  id: "can-design",
+                  title: "Can Design",
+                  date: "",
+                  description: "",
+                  images: [
+                    { src: "/designImages/CanDesginCarousel/1779168916620-3d6c310a-54ff-4a55-afaa-9029e70d796b_1.png", alt: "Can Design slide 1" },
+                    { src: "/designImages/CanDesginCarousel/1779168916620-3d6c310a-54ff-4a55-afaa-9029e70d796b_2.png", alt: "Can Design slide 2" },
+                    { src: "/designImages/CanDesginCarousel/1779168916620-3d6c310a-54ff-4a55-afaa-9029e70d796b_3.png", alt: "Can Design slide 3" }
+                  ]
+                },
+                {
+                  id: "nosh",
+                  title: "Nosh",
+                  date: "",
+                  description: "",
+                  images: [
+                    { src: "/designImages/NoshCarousel/1779168916889-94ee61d8-e4f0-4362-a020-f0da40c97e06_1.png", alt: "Nosh slide 1" },
+                    { src: "/designImages/NoshCarousel/1779168916889-94ee61d8-e4f0-4362-a020-f0da40c97e06_2.png", alt: "Nosh slide 2" },
+                    { src: "/designImages/NoshCarousel/1779168916889-94ee61d8-e4f0-4362-a020-f0da40c97e06_3.png", alt: "Nosh slide 3" },
+                    { src: "/designImages/NoshCarousel/1779168916889-94ee61d8-e4f0-4362-a020-f0da40c97e06_4.png", alt: "Nosh slide 4" },
+                    { src: "/designImages/NoshCarousel/1779168916889-94ee61d8-e4f0-4362-a020-f0da40c97e06_5.png", alt: "Nosh slide 5" },
+                    { src: "/designImages/NoshCarousel/1779168916889-94ee61d8-e4f0-4362-a020-f0da40c97e06_6.png", alt: "Nosh slide 6" }
+                  ]
+                },
+                {
+                  id: "amalfi-coast",
+                  title: "Amalfi Coast",
+                  date: "",
+                  description: "",
+                  images: [
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_1.png", alt: "Amalfi Coast slide 1" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_2.png", alt: "Amalfi Coast slide 2" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_3.png", alt: "Amalfi Coast slide 3" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_4.png", alt: "Amalfi Coast slide 4" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_5.png", alt: "Amalfi Coast slide 5" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_6.png", alt: "Amalfi Coast slide 6" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_7.png", alt: "Amalfi Coast slide 7" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_8.png", alt: "Amalfi Coast slide 8" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_9.png", alt: "Amalfi Coast slide 9" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_10.png", alt: "Amalfi Coast slide 10" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_11.png", alt: "Amalfi Coast slide 11" },
+                    { src: "/designImages/AmalfiCoastCarousel/1779171638028-50297a84-184d-42bf-908f-225700d5b315_12.png", alt: "Amalfi Coast slide 12" }
+                  ]
+                },
+                {
+                  id: "rolex",
+                  image: "/designImages/Rolex.png",
+                  title: "Rolex",
+                  date: "",
+                  description: ""
+                },
+                {
+                  id: "your-brand",
+                  image: "/designImages/YourBrand.png",
+                  title: "YourBrand",
+                  date: "",
+                  description: ""
+                }
+              ]} />
             ) : (
               <p>No projects to display.</p>
             )}  
